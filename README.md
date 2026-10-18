@@ -8,10 +8,10 @@ Welcome to my documentation website. Here you can explore my projects, their tec
 ### [MPU Projects](projects/MPU_BodyPosture.md)
 A brief introduction to my first project.
 
-### [Project 2](./docs/project-2.md)
+### [Stepper motor](projects/Stepper_motor.md)
 A brief introduction to my second project.
 
-### [Project 3](./docs/project-3.md)
+### [Poker game](./docs/project-3.md)
 A brief introduction to my third project.
 
 ---

@@ -1,9 +1,5 @@
 # Posture Monitoring System
-<img
-  alt="Second prototype"
-  src="https://github.com/user-attachments/assets/77af4ad8-f7e4-42b2-a6ee-84c5152b8b21"
-  style="max-width: 100%; height: auto; display: block;"
-/>
+<img alt="Second prototype" src="https://github.com/user-attachments/assets/77af4ad8-f7e4-42b2-a6ee-84c5152b8b21" style="max-width: 100%; height: auto; display: block;"/>
 
 An Arduino posture monitoring system that uses **two MPU-6050 accelerometer sensors** to measure the orientation of the upper and lower back and provide real-time posture feedback through a **16×2 LCD display**.
 
@@ -134,12 +130,12 @@ Posture-Monitoring/
 During this unit, I became most interested in MPU as it complexity is similarly to matrix as their 3 axis where I learning the basic at this time, which linked my interest into MPU. As I also pick LCD display to used it into motoring real time information with limitation on the representation with only 16x2 spaces.
 
 ## My first prototype
-<img width="4032" height="3024" alt="First Prototype" src="https://github.com/user-attachments/assets/c84cead2-8e0c-4fd2-bac9-119f3cefd640" />
+<img alt="First Prototype" src="https://github.com/user-attachments/assets/c84cead2-8e0c-4fd2-bac9-119f3cefd640" style="max-width: 100%; height: auto; display: block;"/>
 
 At first, I want to build measurement system that show how how far an object had been lifted and at what angle it had been tilted. My idea is to used MPU to measure the angle and the location it have been lifted. 
 
 ## Changing concept to the second prototype
-<img width="800" height="514" alt="15-279-WEB" src="https://github.com/user-attachments/assets/832fdc33-6853-4815-97f6-7aabc98fe0a8" />
+<img alt="15-279-WEB" src="https://github.com/user-attachments/assets/832fdc33-6853-4815-97f6-7aabc98fe0a8" style="max-width: 100%; height: auto; display: block;"/>
 
 
 While researching sensors and thinking about how I could make the project more meaningful and impactful, I realized that the MPU-6050 could be used to measure orientation and tilt. Instead of only measuring an object being lifted, after brainstroming the idea, I came out with "human posture".

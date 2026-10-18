@@ -5,7 +5,7 @@ Welcome to my documentation website. Here you can explore my projects, their tec
 
 ## My Projects
 
-### [MPU Projects](MPU_BodyPosture.md)
+### [MPU Projects](index.html)
 A brief introduction to my first project.
 
 ### [Project 2](./docs/project-2.md)

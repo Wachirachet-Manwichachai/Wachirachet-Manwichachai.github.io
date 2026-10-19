@@ -140,13 +140,7 @@ For example, a focused prompt that is actually happen during development:
 
 <a href="First_version.html" class="game-button"> Play first version of the game </a>
 
-### Checking the Results
-
-I learned that AI-generated code should not automatically be assumed to be correct.
-
-Even if a suggested solution looks reasonable, I need to check whether it follows the game's rules and works with the existing code.
-
-This means reviewing the changes, testing different situations, and investigating any unexpected behavior.
+As you play the first version of the game, you can compare it to the lastest version of the game, it is simply not continuous as there is no player decision making in this version of the game. As the problem is the card distrubited at the sametime, my response to AI to fix this problem is to make it more realistic and ability of passing the card turn by turn. As further development continue, I also changed the format and design to be more realistic by make the game setting into a table.
 
 ### What I Learned About Using AI
 
@@ -154,9 +148,7 @@ AI is most useful when I treat it as a tool for learning, debugging, and explori
 
 It can help explain concepts and suggest possible improvements, but I remain responsible for understanding the program and checking whether the result is correct.
 
-I also learned that asking focused questions can help me understand individual components instead of becoming overwhelmed by the entire project.
-
-**Documentation note:** The examples above explain my approach to working with AI. To document my process authentically, I should also include the actual prompts I used, the responses I received, the changes I made, and the results I observed during development.
+I also learned that asking focused questions can help me understand individual components instead understanding the entire project as a whole.
 
 # Part 4: Understanding the algorithm
 
@@ -216,7 +208,7 @@ This taught me that software development involves both technical correctness and
 
 ---
 
-# How I Will Approach Software Development in the Future
+# Part 5: How I Will Approach Software Development in the Future
 
 ## Start With a Clear Plan
 
@@ -278,7 +270,7 @@ I will also verify important results through testing instead of assuming that ge
 
 My goal is to become more independent as a programmer while using AI to make my learning process more effective.
 
-# Part 7: Final Reflection
+# Part 6: Final Reflection
 
 ## What I Noticed
 

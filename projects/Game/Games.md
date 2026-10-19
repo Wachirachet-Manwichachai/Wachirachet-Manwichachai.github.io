@@ -66,9 +66,7 @@ Watching a complete round can help demonstrate how the different parts of the ga
 
 ### What I Learned
 
-I learned that testing a game requires observing how the interface and logic behave during actual play.
-
-A screenshot can show what the game looks like at one moment, but gameplay can demonstrate how the state changes as the player interacts with it.
+I learned that designing a user interface for a game requires much more than just making things look visually appealing. It requires intentional layout choices to guide the player's attention. By breaking the UI into easily comprehensive omponents (like separate tutorial tabs and clean button panels), I discovered how a well-thought-out interface can make even a rule-heavy card game approachable and fun for complete beginners in this game.
 
 # Part 2: Code Autopsy
 This section breaks down the program's anatomy by dissecting its core variables, event listeners, mathematical card-valuation functions, and win-lose chip settlement logic.

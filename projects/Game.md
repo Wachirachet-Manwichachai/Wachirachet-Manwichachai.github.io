@@ -11,204 +11,30 @@ This journal documents how I developed the game, how I used AI, what I learned a
 ---
 
 # Part 1: Code Autopsy
-
-## 1. Thai Pok Deng Game
-
-My project is a digital version of Pok Deng, a traditional Thai card game. The game allows a player to compete against a dealer by receiving cards and comparing hand values.
-
-The game includes:
-- A game table showing the player and dealer.
-- Cards that represent each hand.
-- Betting chips and a chip balance.
-- Buttons for controlling the game.
-- Rules and tutorial sections.
-- A system for calculating hand values.
-- Logic for determining the winner.
-- Payout calculations based on the result of a round.
-
-The project combines HTML for the structure, CSS for the appearance, and JavaScript for the interactive behavior.
-
-## 2. Autopsy: How the Game Is Built
-
-### The Game Table
-
-Instead of using an HTML `<canvas>` element to draw the entire game, my code uses different HTML elements, such as `<div>`, to display the game table, cards, chips, and buttons.
-
-This approach allows the interface to be divided into separate elements. Each part can be styled and updated independently.
-
-For example:
-- The table area displays the dealer and player.
-- Card elements display the cards dealt during a round.
-- Chip elements represent betting amounts.
-- Buttons allow the player to start a round or make decisions.
-- Information areas display balances and results.
-
-Using HTML elements makes it easier to organize the interface and control individual components.
-
-### What I Learned About HTML
-
-HTML provides the structure of the game. Elements such as `<div>`, `<button>`, and headings help organize the content.
-
-I learned that a game interface does not necessarily need to be drawn on a canvas. It can also be built from ordinary HTML elements that are styled with CSS and controlled with JavaScript.
-
-### What I Learned About CSS
-
-CSS controls the visual appearance of the game.
-
-It can change:
-- The background and table colors.
-- The size and position of cards.
-- The appearance of buttons.
-- The spacing between elements.
-- The layout of the dealer and player areas.
-- The appearance of the rules and tutorial windows.
-
-I learned that a clear layout is important because players need to understand the game state without becoming confused by the interface.
-
-### What I Learned About JavaScript
-
-JavaScript controls the behavior of the game.
-
-It manages the game state, responds to player actions, calculates hand values, and determines the result of each round.
-
-The most important lesson was that an interactive game requires more than a visual interface. The underlying logic must correctly connect the player's actions to the game's state and final results.
-
----
-
-## 3. Variables
-
-Variables store information that the game needs to remember while it is running.
-
-Examples of information that a card game may need to track include:
-- The player's chip balance.
-- The current bet.
-- The player's cards.
-- The dealer's cards.
-- The current round.
-- Whether a round is active.
-- The result of the previous round.
-- Whether the game is waiting for a player action.
-
-These values allow the game to respond differently depending on what has already happened.
-
-For example, the player's available balance should change after a bet is placed and the round is settled. The game also needs to know which cards belong to the player and which belong to the dealer.
-
-### What I Learned About Variables
-
-I learned that variables represent the game's current state.
-
-Without them, the game would not be able to remember the player's balance, the cards that have been dealt, or whether a round has already finished.
-
-I also learned that changing a variable can affect several other parts of the program. For example, updating the chip balance may require the interface to display the new value immediately.
-
----
-
-## 4. The Game Loop
-
-A game needs a clear sequence of events.
-
-A typical round follows this process:
-
-1. The player selects a bet.
-2. The game checks whether the bet is valid.
-3. The game deals cards.
-4. The game calculates the hand values.
-5. The game compares the player and dealer.
-6. The game determines the result.
-7. The game updates the chip balance.
-8. The game displays the outcome.
-9. The player can begin another round.
-
-This sequence creates a predictable gameplay experience.
-
-In a browser-based game, the program does not necessarily need one continuously running loop like some games written with a game engine. Instead, JavaScript event handlers can respond to button clicks and trigger the appropriate functions.
-
-### What I Learned About Game Flow
-
-I learned that the order of operations matters.
-
-For example, the game should not calculate a final result before the cards have been dealt. It should not settle the same round multiple times, because that could cause the chip balance to be updated incorrectly.
-
-The program needs to manage the transitions between different stages of a round.
-
----
-
-## 5. Game Control
-
-The game uses buttons and player actions to control what happens during a round.
-
-Examples include:
-- Selecting a betting amount.
-- Starting a round.
-- Viewing the rules.
-- Opening a tutorial.
-- Moving between available game options.
-
-When a player clicks a button, JavaScript can execute a function that changes the game state or updates the interface.
-
-For example, pressing the Deal button should start the dealing process only when the game is in a valid state.
-
-### What I Learned About Event Handling
-
-I learned that an event handler connects a player's action to the program's behavior.
-
-However, an event handler should not simply perform an action without checking the current state. The program should also prevent invalid actions, such as starting another round while the current round is still being resolved.
-
-This helped me understand the connection between user interface design and program logic.
-
----
-
-## 6. Win-Lose Logic
-
-After the cards are dealt, the game needs to determine which hand wins.
-
-The general process is:
-
-1. Identify the cards in each hand.
-2. Calculate the value of each hand.
-3. Check whether either hand qualifies for a special hand.
-4. Compare the player and dealer according to the implemented rules.
-5. Determine whether the player wins, loses, or ties.
-6. Apply the correct payout.
-7. Display the result.
-
-The comparison must follow the rules implemented in the game. A visual display alone cannot determine the winner; the program needs to evaluate the cards and apply the correct conditions.
-
-### What I Learned About Conditional Logic
-
-Conditional statements allow a program to make decisions.
-
-For example, the program may need to check whether the player has a special hand before comparing ordinary hand values.
-
-I learned that the order of these conditions can be important. If a special hand is evaluated incorrectly or too late, the game may produce an incorrect result.
-
----
-
-## 7. Scoring and Payouts
-
-The game needs to calculate the result of each round and update the player's balance.
-
-The payout depends on the result and the rules implemented in the game.
-
-The program must distinguish between:
-- A winning round.
-- A losing round.
-- A tied round.
-- A winning hand that qualifies for a special payout.
-
-The balance should be updated consistently, and the same round should not be settled more than once.
-
-### What I Learned About Scoring
-
-I learned that scoring logic is closely connected to game state.
-
-For example, the game must keep track of the original bet and the outcome before calculating the balance change.
-
-If the program applies a payout twice, deducts the wrong amount, or treats a tie as a loss, the displayed balance will become incorrect.
-
-This showed me why testing the calculations is just as important as making the game look good.
-
----
+## Size
+In my code instead of using HTML <canvas> element. Instead, it uses different HTML elements like <div> to disply the game table, cards, chips, and button
+## Variables
+My game keeps track of the deck of cards, player's hands, dealer's hand, chip balances, bets, current round, and game phase. These variables are declared in the JavaScript code. The main variables include deck, hands, dealerHand, chips, bet, bets, roundN, and phase.
+## Loop
+In my game doesn't contain loop like requestAnimationFrame() or setInterval(). I use a more simple playRound() to control sequence of the play in each round. It deals cards and manages the player's turns, then showdown() to calculate the results. The function run to calculate the result card.
+# Game Control
+My game doesn't use keyboard control. Instead, it uses click event listener for betting the chip and the draw and stay button. Clicking these control changes the selected bet or determined wheter the player draws another card or end the turns.
+# Win-lose logic
+My game doesn't have physical collision detection, but the showdown() function compares player's hand value and compare it to dealer's hand to determine the winner. The program evaluate card combanation by the Pok Deng rule.
+# Scoring
+The score is represented by the chip array, which count player's chip balance. chips[i] += delta this code update after each round ended. The delta variable represent chnages in chips based on the showdown(). if (chips[0] < bet) { setStatus('Not enough chips for that bet!'); return; } If the player don't have enough chip, it will return saying 'Not enough chips for that bet!'
+# What I noticed
+During the game development with Webbgpt, I asked for many version of it, most of those, I asked for python and c++ version, but after testing the python version. The GUI is bad compared to HTML which make me realised that each coding langauge have it own Uniqueness and strength. After some researching, python is diverse and easy but slow because of the compiler needed to preceed heavily. C++ fast and efficient but complex as it is one of the most fastest coding language. HTML is just language that is use to structured display content and needed to use javascript for game or content algorithm. HTML also have CSS is to control the visual design.
+# What I learn
+I learned how HTML, CSS, and JavaScript work together to create an interactive game. HTML provides the structure, CSS controls the visual design, and Javascript manages the algorithm.
+I also learn that not every game have loop as my game don't use it instead it using playround() to start the round but I feel like I wanted to make the game more continuous as I'll add the loop later when I improving the relaibility of the game.
+# Goals for this week
+1. To improve the reliability of the game: I wanted to change the game into loop to make it continuous as each round is very short.
+2. Analyse the game logic: I will review the playRound() and showdown() functions and deeply analyse the code.
+# Reflection
+Overall, this project helped me understand the use of coding language usage and combanation of it in HTML + CSS + JAVASCRIPT as each langauge have difference strength. I learned that building a game is more than designing visual and algorithm but it also need structure.
+# Documentation
+# Innovator’s Journal: Developing My Pok Deng Game
 
 # Part 2: Screenshots and Gameplay
 

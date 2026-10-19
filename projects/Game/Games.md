@@ -8,10 +8,9 @@ During development, I used AI to help me understand coding concepts, identify pr
 
 This journal documents how I developed the game, how I used AI, what I learned about software development, and how I would approach a similar project in the future.
 
----
-
 # Part 1: Code Autopsy
 ## Size
+
 In my code instead of using HTML <canvas> element. Instead, it uses different HTML elements like <div> to disply the game table, cards, chips, and button
 ## Variables
 My game keeps track of the deck of cards, player's hands, dealer's hand, chip balances, bets, current round, and game phase. These variables are declared in the JavaScript code. The main variables include deck, hands, dealerHand, chips, bet, bets, roundN, and phase.

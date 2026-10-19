@@ -71,6 +71,7 @@ I learned that designing a user interface for a game requires much more than jus
 # Part 2: Code Autopsy
 This section breaks down the program's anatomy by dissecting its core variables, event listeners, mathematical card-valuation functions, and win-lose chip settlement logic.
 ## Size
+
 In my code instead of using HTML <canvas> element. Instead, it uses different HTML elements like <div> to disply the game table, cards, chips, and button
 ## Variables
 My game keeps track of the deck of cards, player's hands, dealer's hand, chip balances, bets, current round, and game phase. These variables are declared in the JavaScript code. The main variables include deck, hands, dealerHand, chips, bet, bets, roundN, and phase.
@@ -91,6 +92,7 @@ I also learn that not every game have loop as my game don't use it instead it us
 ## Goals for this week
 1. To improve the reliability of the game: I wanted to change the game into loop to make it continuous as each round is very short.
 2. Analyse the game logic: I will review the playRound() and showdown() functions and deeply analyse the code.
+
 ## Reflection
 Overall, this project helped me understand the use of coding language usage and combanation of it in HTML + CSS + JAVASCRIPT as each langauge have difference strength. I learned that building a game is more than designing visual and algorithm but it also need structure.
 

@@ -33,8 +33,8 @@ I also learn that not every game have loop as my game don't use it instead it us
 2. Analyse the game logic: I will review the playRound() and showdown() functions and deeply analyse the code.
 ## Reflection
 Overall, this project helped me understand the use of coding language usage and combanation of it in HTML + CSS + JAVASCRIPT as each langauge have difference strength. I learned that building a game is more than designing visual and algorithm but it also need structure.
-## Documentation
-# Innovator’s Journal: Developing My Pok Deng Game
+# Documentation
+## Innovator’s Journal: Developing My Pok Deng Game
 
 # Part 2: Screenshots and Gameplay
 

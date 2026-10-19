@@ -35,7 +35,7 @@ I also learn that not every game have loop as my game don't use it instead it us
 Overall, this project helped me understand the use of coding language usage and combanation of it in HTML + CSS + JAVASCRIPT as each langauge have difference strength. I learned that building a game is more than designing visual and algorithm but it also need structure.
 # Part 2: Screenshots and Gameplay
 
-The screenshots below document the interface and tutorials created for the game for an easier understanding of the game for beginner.
+The screenshots below document the interface and tutorials created for an easier understanding of the game for total beginner.
 
 ## Main Game Screen
 

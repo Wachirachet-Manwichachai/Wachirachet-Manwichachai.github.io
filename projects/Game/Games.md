@@ -162,6 +162,10 @@ HTML create the structure, CSS controls the design, and JavaScript manages logic
 
 These technologies have different responsibilities, but the finished game depends on all of them working together at the sametime.
 
+# Flow Chart of the game
+
+<img style="max-width: 100%; height: auto; display: block;" src="https://github.com/user-attachments/assets/0aad45f0-9c2c-4cbc-9ba2-c78931277d3a" />
+
 ## Understanding Phase
 
 I learned that the game needed information about the current round.

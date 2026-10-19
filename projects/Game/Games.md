@@ -70,12 +70,9 @@ I learned that testing a game requires observing how the interface and logic beh
 
 A screenshot can show what the game looks like at one moment, but gameplay can demonstrate how the state changes as the player interacts with it.
 
-# Development Process
-
 # Part 2: Code Autopsy
 This section breaks down the program's anatomy by dissecting its core variables, event listeners, mathematical card-valuation functions, and win-lose chip settlement logic.
 ## Size
-
 In my code instead of using HTML <canvas> element. Instead, it uses different HTML elements like <div> to disply the game table, cards, chips, and button
 ## Variables
 My game keeps track of the deck of cards, player's hands, dealer's hand, chip balances, bets, current round, and game phase. These variables are declared in the JavaScript code. The main variables include deck, hands, dealerHand, chips, bet, bets, roundN, and phase.
@@ -99,25 +96,17 @@ I also learn that not every game have loop as my game don't use it instead it us
 ## Reflection
 Overall, this project helped me understand the use of coding language usage and combanation of it in HTML + CSS + JAVASCRIPT as each langauge have difference strength. I learned that building a game is more than designing visual and algorithm but it also need structure.
 
-## 14. How I Developed the Game
+# Part 3: Development Process
 
-I approached the project by building an interactive card game and improving it as I learned more about the code.
+## How I Developed the Game
+Since it my first time getting in touch in HTML, I used AI I used AI to help develop the game. Even though I was new to the language, I was able to understand the code as we built it together.
+# The development process naturally split into two core areas:
 
-During development, I needed to consider both the visual design and the logic that controlled the game.
+The Visual Side: Organizing the GUI or the designing part by using CSS.
 
-The visual side involved organizing the game table, cards, chips, buttons, and tutorial windows.
+The Logical Side: Create algorithm, variables, and control by using HTML as structure and Javascript as the logic.
 
-The logical side involved managing variables, responding to events, calculating card values, comparing hands, and updating the player's balance.
-
-One important lesson was that these two sides need to work together. A well-designed interface is not enough if the underlying calculations are incorrect. Similarly, correct calculations are not enough if the player cannot understand the interface.
-
-I also learned that complex projects become easier to understand when divided into smaller components.
-
-For example, displaying cards, calculating hand values, determining the winner, and updating the balance are separate responsibilities. Treating them separately makes the code easier to inspect and test.
-
----
-
-## 15. How I Used AI and Improved the Results
+## How I Used AI and Improved the Results
 
 I used AI as a coding assistant during development. It helped me explore possible implementations, understand programming concepts, and identify ways to improve the game.
 
@@ -125,7 +114,7 @@ However, using AI effectively required more than accepting its first response.
 
 I needed to evaluate the suggestions and consider whether they matched the requirements of my project.
 
-### Step 1: Explaining the Goal
+### Explaining the Goal
 
 I started by describing the type of game I wanted to build and the features it needed.
 
@@ -133,7 +122,7 @@ This gave AI enough context to suggest an initial structure and possible impleme
 
 I learned that a clear description of the goal makes it easier to obtain useful technical guidance.
 
-### Step 2: Reviewing the Generated Code
+### Reviewing the Generated Code
 
 After receiving suggestions, I needed to examine how the code was organized.
 
@@ -147,7 +136,7 @@ I considered questions such as:
 
 This helped me move beyond simply copying code and toward understanding how the different parts worked together.
 
-### Step 3: Identifying Problems
+### Identifying Problems
 
 When the game did not behave as expected, I needed to identify the relevant part of the program.
 
@@ -157,7 +146,7 @@ For example, a problem with the displayed balance might be related to the payout
 
 A problem with the interface might instead be related to HTML structure, CSS positioning, or the function that updates an element.
 
-### Step 4: Improving the Prompts
+### Improving the Prompts
 
 I learned that more specific prompts can lead to more useful answers.
 
@@ -173,7 +162,7 @@ Another example might be:
 
 These prompts focus on understanding and testing the program rather than simply requesting a large amount of new code.
 
-### Step 5: Checking the Results
+### Checking the Results
 
 I learned that AI-generated code should not automatically be assumed to be correct.
 
@@ -191,9 +180,7 @@ I also learned that asking focused questions can help me understand individual c
 
 **Documentation note:** The examples above explain my approach to working with AI. To document my process authentically, I should also include the actual prompts I used, the responses I received, the changes I made, and the results I observed during development.
 
----
-
-# What I Learned About Coding
+# Part 4: Understanding the algorithm
 
 ## Understanding How Different Technologies Work Together
 
@@ -203,7 +190,7 @@ HTML defines the structure, CSS controls the appearance, and JavaScript manages 
 
 These technologies have different responsibilities, but the finished game depends on all of them working together.
 
-## 17. Understanding State
+## Understanding State
 
 I learned that the game needs to remember information about the current round.
 
@@ -211,7 +198,7 @@ Variables represent this information, while functions update it as the player in
 
 I also learned that changing the game state can require updating the interface so that the player sees the correct information.
 
-## 18. Understanding Conditional Logic
+## Understanding Conditional Logic
 
 The game uses decisions to evaluate card values, recognize special hands, compare the player and dealer, and calculate results.
 
@@ -219,7 +206,7 @@ I learned that these decisions need to be organized carefully.
 
 The order in which conditions are checked can affect the result, especially when special hands or payout rules are involved.
 
-## 19. Understanding Functions
+## Understanding Functions
 
 Functions allow a program to group related instructions together.
 
@@ -229,7 +216,7 @@ This makes it easier to understand what each part of the program does.
 
 It also makes debugging more manageable because I can investigate a particular function instead of reviewing the entire program at once.
 
-## 20. Understanding Testing and Debugging
+## Understanding Testing and Debugging
 
 I learned that writing code is only one part of software development.
 
@@ -239,7 +226,7 @@ For a card game, I need to consider ordinary situations as well as special cases
 
 I also learned that an error may come from the relationship between different parts of the program rather than from one isolated line.
 
-## 21. Understanding User Experience
+## Understanding User Experience
 
 The game needs to communicate information clearly.
 
@@ -253,7 +240,7 @@ This taught me that software development involves both technical correctness and
 
 # How I Will Approach Software Development in the Future
 
-## 22. Start With a Clear Plan
+## Start With a Clear Plan
 
 In future projects, I will begin by defining the main goal and listing the required features.
 
@@ -261,7 +248,7 @@ I will identify which features are essential and which can be added later.
 
 This should help me avoid making the project unnecessarily complicated before the core functionality works.
 
-## 23. Build the Project in Small Steps
+## Build the Project in Small Steps
 
 I will try to implement and test one feature at a time.
 
@@ -271,7 +258,7 @@ After each stage, I can check whether the feature works before adding more compl
 
 This approach should make errors easier to locate and reduce the risk of breaking working parts of the project.
 
-## 24. Understand the Code Before Changing It
+## Understand the Code Before Changing It
 
 I will make a greater effort to understand the purpose of each important variable and function.
 
@@ -279,7 +266,7 @@ When using AI, I will ask for explanations of the relevant code and request exam
 
 I want to become better at modifying code independently instead of relying on AI to produce a complete solution every time.
 
-## 25. Test Edge Cases
+## Test Edge Cases
 
 In the future, I will create a checklist of possible situations before considering a project complete.
 
@@ -289,7 +276,7 @@ For other types of software, the relevant edge cases will depend on the problem 
 
 Testing these situations can reveal errors that may not appear during ordinary use.
 
-## 26. Keep Better Documentation
+## Keep Better Documentation
 
 I will document important decisions, problems, and improvements while working on a project.
 
@@ -303,7 +290,7 @@ This includes recording:
 
 Keeping these records will make it easier to understand my own development process and explain how the project evolved.
 
-## 27. Use AI as a Learning Tool
+## Use AI as a Learning Tool
 
 I will continue using AI to help explain difficult concepts and explore possible solutions.
 

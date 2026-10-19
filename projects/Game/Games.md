@@ -122,31 +122,13 @@ I started by explain what type of the game I want to develop.
 
 This gave AI enough context to suggest an initial structure and possible implementation for coding.
 
-I learned that a clear description of the goal makes it easier to obtain useful technical guidance as sometime the prompt 
+I learned that a clear description of the goal makes it easier to obtain useful guidance implementation as sometime when the prompt isn't clear the result could be different from I want.
 
 ### Reviewing the Generated Code
 
-After receiving suggestions, I needed to examine how the code was organized.
-
-I considered questions such as:
-- Which part creates the interface?
-- Which variables store the game state?
-- Which functions respond to button clicks?
-- How are card values calculated?
-- How does the program determine the winner?
-- How does the balance change after a round?
-
+After the code is executed perfectly, I needed to examine how the code was organized.
+The key factor is utilize AI to write a comment for each part and each sentences to deeply understand the code not just a whole but how does it work independently.
 This helped me move beyond simply copying code and toward understanding how the different parts worked together.
-
-### Identifying Problems
-
-When the game did not behave as expected, I needed to identify the relevant part of the program.
-
-Instead of treating the entire project as one large problem, I learned to focus on the feature that needed attention.
-
-For example, a problem with the displayed balance might be related to the payout calculation or the timing of a state update.
-
-A problem with the interface might instead be related to HTML structure, CSS positioning, or the function that updates an element.
 
 ### Improving the Prompts
 
@@ -154,15 +136,9 @@ I learned that more specific prompts can lead to more useful answers.
 
 Rather than asking AI to improve the entire game without explaining the problem, a better approach is to describe the feature, the expected behavior, and the observed problem.
 
-For example, a focused prompt might be:
+For example, a focused prompt that is actually happen during development:
 
-> Explain how the game calculates the player's hand value. Identify the relevant variables and functions, walk through the calculation with an example, and explain how I could test whether the result is correct.
-
-Another example might be:
-
-> Review the payout logic. Explain how the original bet, the result of the round, and any applicable multiplier affect the player's balance. Identify possible cases that should be tested, but explain the reasoning before suggesting code changes.
-
-These prompts focus on understanding and testing the program rather than simply requesting a large amount of new code.
+<a href="First_version.html" class="game-button"> Play first version of the game </a>
 
 ### Checking the Results
 

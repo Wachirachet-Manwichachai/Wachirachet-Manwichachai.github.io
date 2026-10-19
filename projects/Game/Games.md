@@ -8,32 +8,7 @@ During development, I used AI to help me understand coding concepts, identify pr
 
 This journal documents how I developed the game, how I used AI, what I learned about software development, and how I would approach a similar project in the future.
 
-# Part 1: Code Autopsy
-## Size
-
-In my code instead of using HTML <canvas> element. Instead, it uses different HTML elements like <div> to disply the game table, cards, chips, and button
-## Variables
-My game keeps track of the deck of cards, player's hands, dealer's hand, chip balances, bets, current round, and game phase. These variables are declared in the JavaScript code. The main variables include deck, hands, dealerHand, chips, bet, bets, roundN, and phase.
-## Loop
-In my game doesn't contain loop like requestAnimationFrame() or setInterval(). I use a more simple playRound() to control sequence of the play in each round. It deals cards and manages the 
-player's turns, then showdown() to calculate the results. The function run to calculate the result card.
-## Game Control
-My game doesn't use keyboard control. Instead, it uses click event listener for betting the chip and the draw and stay button. Clicking these control changes the selected bet or determined wheter the player draws another card or end the turns.
-## Win-lose logic
-My game doesn't have physical collision detection, but the showdown() function compares player's hand value and compare it to dealer's hand to determine the winner. The program evaluate card combanation by the Pok Deng rule.
-## Scoring
-The score is represented by the chip array, which count player's chip balance. chips[i] += delta this code update after each round ended. The delta variable represent chnages in chips based on the showdown(). if (chips[0] < bet) { setStatus('Not enough chips for that bet!'); return; } If the player don't have enough chip, it will return saying 'Not enough chips for that bet!'
-## What I noticed
-During the game development with Webbgpt, I asked for many version of it, most of those, I asked for python and c++ version, but after testing the python version. The GUI is bad compared to HTML which make me realised that each coding langauge have it own Uniqueness and strength. After some researching, python is diverse and easy but slow because of the compiler needed to preceed heavily. C++ fast and efficient but complex as it is one of the most fastest coding language. HTML is just language that is use to structured display content and needed to use javascript for game or content algorithm. HTML also have CSS is to control the visual design.
-## What I learn
-I learned how HTML, CSS, and JavaScript work together to create an interactive game. HTML provides the structure, CSS controls the visual design, and Javascript manages the algorithm.
-I also learn that not every game have loop as my game don't use it instead it using playround() to start the round but I feel like I wanted to make the game more continuous as I'll add the loop later when I improving the relaibility of the game.
-## Goals for this week
-1. To improve the reliability of the game: I wanted to change the game into loop to make it continuous as each round is very short.
-2. Analyse the game logic: I will review the playRound() and showdown() functions and deeply analyse the code.
-## Reflection
-Overall, this project helped me understand the use of coding language usage and combanation of it in HTML + CSS + JAVASCRIPT as each langauge have difference strength. I learned that building a game is more than designing visual and algorithm but it also need structure.
-# Part 2: Screenshots and Gameplay
+# Part 1: GUI
 
 The screenshots below document the interface and tutorials created for an easier understanding of the game for total beginner.
 
@@ -95,7 +70,33 @@ I learned that testing a game requires observing how the interface and logic beh
 
 A screenshot can show what the game looks like at one moment, but gameplay can demonstrate how the state changes as the player interacts with it.
 
-# Part 3: Development Process
+# Development Process
+
+# Part 2: Code Autopsy
+## Size
+
+In my code instead of using HTML <canvas> element. Instead, it uses different HTML elements like <div> to disply the game table, cards, chips, and button
+## Variables
+My game keeps track of the deck of cards, player's hands, dealer's hand, chip balances, bets, current round, and game phase. These variables are declared in the JavaScript code. The main variables include deck, hands, dealerHand, chips, bet, bets, roundN, and phase.
+## Loop
+In my game doesn't contain loop like requestAnimationFrame() or setInterval(). I use a more simple playRound() to control sequence of the play in each round. It deals cards and manages the 
+player's turns, then showdown() to calculate the results. The function run to calculate the result card.
+## Game Control
+My game doesn't use keyboard control. Instead, it uses click event listener for betting the chip and the draw and stay button. Clicking these control changes the selected bet or determined wheter the player draws another card or end the turns.
+## Win-lose logic
+My game doesn't have physical collision detection, but the showdown() function compares player's hand value and compare it to dealer's hand to determine the winner. The program evaluate card combanation by the Pok Deng rule.
+## Scoring
+The score is represented by the chip array, which count player's chip balance. chips[i] += delta this code update after each round ended. The delta variable represent chnages in chips based on the showdown(). if (chips[0] < bet) { setStatus('Not enough chips for that bet!'); return; } If the player don't have enough chip, it will return saying 'Not enough chips for that bet!'
+## What I noticed
+During the game development with Webbgpt, I asked for many version of it, most of those, I asked for python and c++ version, but after testing the python version. The GUI is bad compared to HTML which make me realised that each coding langauge have it own Uniqueness and strength. After some researching, python is diverse and easy but slow because of the compiler needed to preceed heavily. C++ fast and efficient but complex as it is one of the most fastest coding language. HTML is just language that is use to structured display content and needed to use javascript for game or content algorithm. HTML also have CSS is to control the visual design.
+## What I learn
+I learned how HTML, CSS, and JavaScript work together to create an interactive game. HTML provides the structure, CSS controls the visual design, and Javascript manages the algorithm.
+I also learn that not every game have loop as my game don't use it instead it using playround() to start the round but I feel like I wanted to make the game more continuous as I'll add the loop later when I improving the relaibility of the game.
+## Goals for this week
+1. To improve the reliability of the game: I wanted to change the game into loop to make it continuous as each round is very short.
+2. Analyse the game logic: I will review the playRound() and showdown() functions and deeply analyse the code.
+## Reflection
+Overall, this project helped me understand the use of coding language usage and combanation of it in HTML + CSS + JAVASCRIPT as each langauge have difference strength. I learned that building a game is more than designing visual and algorithm but it also need structure.
 
 ## 14. How I Developed the Game
 
@@ -191,9 +192,9 @@ I also learned that asking focused questions can help me understand individual c
 
 ---
 
-# Part 4: What I Learned About Coding
+# What I Learned About Coding
 
-## 16. Understanding How Different Technologies Work Together
+## Understanding How Different Technologies Work Together
 
 Through this project, I learned how HTML, CSS, and JavaScript work together to create an interactive browser-based game.
 
@@ -249,7 +250,7 @@ This taught me that software development involves both technical correctness and
 
 ---
 
-# Part 5: How I Will Approach Software Development in the Future
+# How I Will Approach Software Development in the Future
 
 ## 22. Start With a Clear Plan
 
@@ -311,32 +312,9 @@ I will also verify important results through testing instead of assuming that ge
 
 My goal is to become more independent as a programmer while using AI to make my learning process more effective.
 
----
-
-# Part 6: Goals for This Week
-
-## 28. My Development Goals
-
-My goals for the week are:
-
-- [ ] Review the main variables and functions in my game.
-- [ ] Explain how the game moves from one stage of a round to the next.
-- [ ] Check how card values are calculated.
-- [ ] Test the logic for determining the winner.
-- [ ] Verify the payout calculations and chip balance updates.
-- [ ] Test special hands, ties, and invalid actions.
-- [ ] Capture screenshots of the main interface and tutorials.
-- [ ] Record a gameplay video demonstrating a complete round.
-- [ ] Include actual AI prompts and explain how I evaluated the responses.
-- [ ] Update this README with evidence of my development process.
-
-These goals will help me improve both the game and my understanding of the code behind it.
-
----
-
 # Part 7: Final Reflection
 
-## 29. What I Noticed
+## What I Noticed
 
 While developing my Pok Deng game, I noticed that making an interactive program requires coordinating several different systems.
 
@@ -346,7 +324,7 @@ A problem in one part can affect another. For example, incorrect payout logic ca
 
 I also noticed that breaking a project into smaller components makes it easier to understand. When I focus on one function or feature at a time, I can investigate its behavior and identify what needs to change.
 
-## 30. What I Learned
+## What I Learned
 
 I learned that software development is an iterative process.
 
@@ -356,7 +334,7 @@ I also learned that AI can support this process, but it does not replace the nee
 
 The most valuable part of using AI is not simply receiving code. It is learning how to ask better questions, evaluate possible solutions, and understand why a particular approach works.
 
-## 31. How My Understanding Has Deepened
+## How My Understanding Has Deepened
 
 Before working on this project, I might have viewed a game mainly as something that appears on the screen and responds to button clicks.
 
@@ -368,7 +346,7 @@ I also gained a better understanding of the importance of functions, conditional
 
 These concepts are useful beyond card games because they are part of building many types of interactive software.
 
-## 32. My Future Approach
+## My Future Approach
 
 In future projects, I want to be more systematic.
 

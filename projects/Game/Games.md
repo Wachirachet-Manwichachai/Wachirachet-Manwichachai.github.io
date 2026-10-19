@@ -40,7 +40,7 @@ The screenshots below document the interface and tutorials created for the game 
 
 ## Main Game Screen
 
-![Main Pok Deng game screen](projects/Game/Screenshot 2026-10-16 122328.png)
+<img style="max-width: 100%; height: auto; display: block;" alt="Screenshot 2026-10-16 122328" src="https://github.com/user-attachments/assets/c31d529a-5a76-45fd-ad1a-2a283fad339a" />
 
 The main game screen displays the game table, dealer, player, cards, and chip balance.
 

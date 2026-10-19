@@ -72,8 +72,7 @@ Providing instructions directly in the game makes the experience easier to follo
 
 ## 10. Card Values Tutorial
 
-<img style="max-width: 100%; height: auto; display: block;"<img width="967" height="661" alt="Screenshot 2026-10-16 122358" src="https://github.com/user-attachments/assets/3cf8c43c-69e3-4769-8e8b-132a922dc0a1" />
- alt="Screenshot 2026-10-16 122352" src="https://github.com/user-attachments/assets/fa51ef56-9fbd-4b16-9fdd-fdb39e79fe07" />
+<img style="max-width: 100%; height: auto; display: block;" alt="Screenshot 2026-10-16 122358" src="https://github.com/user-attachments/assets/3cf8c43c-69e3-4769-8e8b-132a922dc0a1" />
 
 This tutorial explains how card values are calculated.
 

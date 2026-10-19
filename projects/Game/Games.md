@@ -100,12 +100,14 @@ Overall, this project helped me understand the use of coding language usage and 
 
 ## How I Developed the Game
 Since it my first time getting in touch in HTML, I used AI I used AI to help develop the game. Even though I was new to the language, I was able to understand the code as we built it together.
+
 # The development process naturally split into two core areas:
-
 The Visual Side: Organizing the GUI or the designing part by using CSS.
-
 The Logical Side: Create algorithm, variables, and control by using HTML as structure and Javascript as the logic.
 
+A major takeaway from this project is that these two sides must work. A polished interface is ineffective if the calculations are flawed, just as correct math fails if the player cannot understand the interface.
+
+I also learned that complex projects like become much easier to manage and understand when broken down into smaller, modular components. For example, rendering cards, calculating hand values, determining winners, and updating balances were handled as separate responsibilities. Isolating these pieces made the code significantly easier to test, debug, and read.
 ## How I Used AI and Improved the Results
 
 I used AI as a coding assistant during development. It helped me explore possible implementations, understand programming concepts, and identify ways to improve the game.
@@ -116,11 +118,11 @@ I needed to evaluate the suggestions and consider whether they matched the requi
 
 ### Explaining the Goal
 
-I started by describing the type of game I wanted to build and the features it needed.
+I started by explain what type of the game I want to develop.
 
-This gave AI enough context to suggest an initial structure and possible implementation.
+This gave AI enough context to suggest an initial structure and possible implementation for coding.
 
-I learned that a clear description of the goal makes it easier to obtain useful technical guidance.
+I learned that a clear description of the goal makes it easier to obtain useful technical guidance as sometime the prompt 
 
 ### Reviewing the Generated Code
 

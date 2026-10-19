@@ -56,14 +56,6 @@ The Rules button provides an explanation of how to play the game.
 
 It helps players understand the objective, card values, order of play, and relevant payout rules without leaving the game.
 
-### What I Learned
-
-I learned that usability is part of software development. A game can function correctly but still be difficult to use if players do not understand its rules.
-
-Providing instructions directly in the game makes the experience easier to follow.
-
----
-
 ## Card Values Tutorial
 
 <img style="max-width: 100%; height: auto; display: block;" alt="Screenshot 2026-10-16 122358" src="https://github.com/user-attachments/assets/3cf8c43c-69e3-4769-8e8b-132a922dc0a1" />
@@ -74,14 +66,6 @@ In a common Pok Deng scoring method, the total of the cards is reduced to its la
 
 The game must calculate these values consistently so that the hand comparison works correctly.
 
-### What I Learned
-
-I learned that a rule that seems simple to a human player still needs to be translated into precise program instructions.
-
-The program must perform the same calculation every time and handle different combinations of cards correctly.
-
----
-
 ## Pok Hands Tutorial
 
 <img style="max-width: 100%; height: auto; display: block;" alt="Screenshot 2026-10-16 122358" src="https://github.com/user-attachments/assets/6653f0f2-150b-4f4f-beb2-b557fcce447d" />
@@ -90,14 +74,6 @@ This tutorial demonstrates Pok 8 and Pok 9, which are special hands formed by th
 
 Showing examples helps players understand why these hands are treated differently from ordinary hands.
 
-### What I Learned
-
-I learned that special cases need to be considered explicitly in the code.
-
-The program cannot always compare hand values using one simple rule. It must also check whether a hand qualifies for a special category.
-
----
-
 ## Deng Multipliers Tutorial
 
 <img style="max-width: 100%; height: auto; display: block;" alt="Screenshot 2026-10-16 122404" src="https://github.com/user-attachments/assets/2f35c578-810a-46d1-82cc-57fe2fd1107b" />
@@ -105,10 +81,6 @@ The program cannot always compare hand values using one simple rule. It must als
 This tutorial explains combinations that can affect payouts, such as pairs, suited cards, straights, flushes, and three of a kind, where applicable under the rules implemented in the game.
 
 The program needs to evaluate these combinations according to the game's rule definitions.
-
-
-
----
 
 ## Gameplay
 
@@ -123,9 +95,6 @@ Watching a complete round can help demonstrate how the different parts of the ga
 I learned that testing a game requires observing how the interface and logic behave during actual play.
 
 A screenshot can show what the game looks like at one moment, but gameplay can demonstrate how the state changes as the player interacts with it.
-
-### Game
-
 
 # Part 3: Development Process
 

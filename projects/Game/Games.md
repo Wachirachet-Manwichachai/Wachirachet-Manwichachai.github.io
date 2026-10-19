@@ -56,7 +56,7 @@ I learned that a game interface should make the most important information easy 
 
 ## 9. Rules Window
 
-![Pok Deng game rules](projects/Game/Screenshot 2026-10-16 122342.png)
+<img style="max-width: 100%; height: auto; display: block;" alt="Screenshot 2026-10-16 122342" src="https://github.com/user-attachments/assets/ce1b9c20-1e12-4835-84b0-db1322bb5965" />
 
 The Rules button provides an explanation of how to play the game.
 
@@ -72,7 +72,8 @@ Providing instructions directly in the game makes the experience easier to follo
 
 ## 10. Card Values Tutorial
 
-![Tutorial explaining card values](projects/Game/Screenshot 2026-10-16 122352.png)
+<img style="max-width: 100%; height: auto; display: block;"<img width="967" height="661" alt="Screenshot 2026-10-16 122358" src="https://github.com/user-attachments/assets/3cf8c43c-69e3-4769-8e8b-132a922dc0a1" />
+ alt="Screenshot 2026-10-16 122352" src="https://github.com/user-attachments/assets/fa51ef56-9fbd-4b16-9fdd-fdb39e79fe07" />
 
 This tutorial explains how card values are calculated.
 
@@ -90,7 +91,7 @@ The program must perform the same calculation every time and handle different co
 
 ## 11. Pok Hands Tutorial
 
-![Tutorial showing Pok 8 and Pok 9](Screenshot 2026-10-16 122358.png)
+<img style="max-width: 100%; height: auto; display: block;" alt="Screenshot 2026-10-16 122358" src="https://github.com/user-attachments/assets/6653f0f2-150b-4f4f-beb2-b557fcce447d" />
 
 This tutorial demonstrates Pok 8 and Pok 9, which are special hands formed by the first two cards under the game's rules.
 
@@ -106,7 +107,7 @@ The program cannot always compare hand values using one simple rule. It must als
 
 ## 12. Deng Multipliers Tutorial
 
-![Tutorial showing Deng multipliers](projects/Game/Screenshot 2026-10-16 122404.png)
+<img style="max-width: 100%; height: auto; display: block;" alt="Screenshot 2026-10-16 122404" src="https://github.com/user-attachments/assets/2f35c578-810a-46d1-82cc-57fe2fd1107b" />
 
 This tutorial explains combinations that can affect payouts, such as pairs, suited cards, straights, flushes, and three of a kind, where applicable under the rules implemented in the game.
 

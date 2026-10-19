@@ -11,7 +11,7 @@ A brief introduction to my first project.
 ### [Stepper motor](projects/Stepper_motor.md)
 A brief introduction to my second project.
 
-### [Poker game](projects/Games.md)
+### [Poker game](projects/Game/Games.md)
 A brief introduction to my third project.
 
 ---

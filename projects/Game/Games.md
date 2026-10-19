@@ -208,7 +208,7 @@ I also noticed that breaking a project into smaller components makes it easier t
 
 ## What I Learned
 
-I learned that software development is an interative process.
+I learned that software development is an continuous process phase by phase.
 
 The first version of a feature does not necessarily need to be perfect. It is more important to understand what the feature should do, test the change, identify problems, and make informed improvements.
 
@@ -216,15 +216,15 @@ I also learned that AI can support this process, but it does not totally verify 
 
 The most valuable part of using AI is not simply receiving code. It is learning how to ask better questions, evaluate possible solutions, and understand why a particular approach works.
 
-## How My Understanding Has Deepened
+## My understanding
 
 Before working on this project, I might have viewed a game mainly as something that appears on the screen and responds to button clicks.
 
 Developing the game helped me understand that the interface is only one part of the system.
 
-Behind the interface, the program must manage state, process user actions, apply rules, perform calculations, and handle different outcomes.
+Behind the interface, the program manage states, process user actions, apply rules, perform calculations, and handle different outcomes.
 
-I also gained a better understanding of the importance of functions, conditional logic, event handling, testing, and documentation.
+I also gained a better understanding of the importance of functions, conditional logic, win/lose decision, testing, and documentation.
 
 These concepts are useful beyond card games because they are part of building many types of interactive software.
 
@@ -232,14 +232,10 @@ These concepts are useful beyond card games because they are part of building ma
 
 In future projects, I want to be more systematic.
 
-I will start with a clear plan, divide the project into manageable components, and test each component before combining everything.
+I will start with a clear plan, divide the project into small components, and test each component before combining everything.
 
-When I use AI, I will ask focused questions, examine the suggested code, and verify the results.
+When I use AI, I will ask focused questions, examine the code, and verify the results.
 
-I will also document my decisions and mistakes so that I can learn from them instead of repeating the same problems.
-
-Ultimately, I want to become a developer who can understand a problem, design a solution, implement it, and explain why it works.
+I will also document my decisions and mistakes so that I can learn from them for a better decision in the future making each times I struggled and failed I improved.
 
 This project has helped me recognize that learning to code is not just about making a program run. It is about developing the ability to reason through problems, test ideas, and improve a solution over time.
-
-If your files have different names, update the Markdown image paths and video link to match them.

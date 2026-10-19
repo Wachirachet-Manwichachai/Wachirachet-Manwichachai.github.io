@@ -84,7 +84,7 @@ The program needs to evaluate these combinations according to the game's rule de
 
 ## Gameplay
 
-[**▶ Watch My Pok Deng Gameplay Video**](videos/pok-deng-gameplay.mp4)
+<a href="pok-deng.html" class="game-button"> Play Pok Deng </a>
 
 The gameplay video demonstrates the game in action, including the interface, player controls, and the result of a round.
 

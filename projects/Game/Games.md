@@ -48,12 +48,6 @@ The player can choose a betting amount and use the game controls to begin a roun
 
 This screen is important because it brings the main parts of the game together in one interface.
 
-### What I Learned
-
-I learned that a game interface should make the most important information easy to find. Players need to understand where their cards are, how much they have available, and which actions they can take.
-
----
-
 ## Rules Window
 
 <img style="max-width: 100%; height: auto; display: block;" alt="Screenshot 2026-10-16 122342" src="https://github.com/user-attachments/assets/ce1b9c20-1e12-4835-84b0-db1322bb5965" />
@@ -112,15 +106,11 @@ This tutorial explains combinations that can affect payouts, such as pairs, suit
 
 The program needs to evaluate these combinations according to the game's rule definitions.
 
-### What I Learned
 
-I learned that the rules for determining the winner and the rules for calculating payouts are related but distinct.
-
-A hand can have a particular value while also qualifying for a special category. The program needs to evaluate these conditions consistently to avoid incorrect results.
 
 ---
 
-## Gameplay Video
+## Gameplay
 
 [**▶ Watch My Pok Deng Gameplay Video**](videos/pok-deng-gameplay.mp4)
 

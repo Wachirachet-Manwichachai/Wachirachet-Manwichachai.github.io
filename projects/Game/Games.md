@@ -8,9 +8,9 @@ During development, I used AI to help me understand coding concepts, identify pr
 
 This journal documents how I developed the game, how I used AI, what I learned about software development, and how I would approach a similar project in the future.
 
-# Part 1: GUI
+# Part 1: GUI (Graphical User Interface)
 
-The screenshots below document the interface and tutorials created for an easier understanding of the game for total beginner.
+This section details how HTML elements and CSS styling form the visual layout of the poker table, cards, chips, and interactive buttons and additional features created for an easier understanding of the game for total beginner.
 
 ## Main Game Screen
 
@@ -73,6 +73,7 @@ A screenshot can show what the game looks like at one moment, but gameplay can d
 # Development Process
 
 # Part 2: Code Autopsy
+This section breaks down the program's anatomy by dissecting its core variables, event listeners, mathematical card-valuation functions, and win-lose chip settlement logic.
 ## Size
 
 In my code instead of using HTML <canvas> element. Instead, it uses different HTML elements like <div> to disply the game table, cards, chips, and button

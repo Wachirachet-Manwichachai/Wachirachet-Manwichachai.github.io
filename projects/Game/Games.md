@@ -54,7 +54,7 @@ I learned that a game interface should make the most important information easy 
 
 ---
 
-## 9. Rules Window
+## Rules Window
 
 <img style="max-width: 100%; height: auto; display: block;" alt="Screenshot 2026-10-16 122342" src="https://github.com/user-attachments/assets/ce1b9c20-1e12-4835-84b0-db1322bb5965" />
 
@@ -70,7 +70,7 @@ Providing instructions directly in the game makes the experience easier to follo
 
 ---
 
-## 10. Card Values Tutorial
+## Card Values Tutorial
 
 <img style="max-width: 100%; height: auto; display: block;" alt="Screenshot 2026-10-16 122358" src="https://github.com/user-attachments/assets/3cf8c43c-69e3-4769-8e8b-132a922dc0a1" />
 
@@ -88,7 +88,7 @@ The program must perform the same calculation every time and handle different co
 
 ---
 
-## 11. Pok Hands Tutorial
+## Pok Hands Tutorial
 
 <img style="max-width: 100%; height: auto; display: block;" alt="Screenshot 2026-10-16 122358" src="https://github.com/user-attachments/assets/6653f0f2-150b-4f4f-beb2-b557fcce447d" />
 
@@ -104,7 +104,7 @@ The program cannot always compare hand values using one simple rule. It must als
 
 ---
 
-## 12. Deng Multipliers Tutorial
+## Deng Multipliers Tutorial
 
 <img style="max-width: 100%; height: auto; display: block;" alt="Screenshot 2026-10-16 122404" src="https://github.com/user-attachments/assets/2f35c578-810a-46d1-82cc-57fe2fd1107b" />
 
@@ -120,7 +120,7 @@ A hand can have a particular value while also qualifying for a special category.
 
 ---
 
-## 13. Gameplay Video
+## Gameplay Video
 
 [**▶ Watch My Pok Deng Gameplay Video**](videos/pok-deng-gameplay.mp4)
 
@@ -134,25 +134,8 @@ I learned that testing a game requires observing how the interface and logic beh
 
 A screenshot can show what the game looks like at one moment, but gameplay can demonstrate how the state changes as the player interacts with it.
 
-### Testing Checklist
+### Game
 
-When testing the game, I should check that:
-
-- The player can select a valid bet.
-- The game does not accept a bet that exceeds the available balance.
-- The Deal button starts a valid round.
-- The cards are displayed correctly.
-- The hand values are calculated correctly.
-- Special hands are evaluated correctly.
-- The winner is determined according to the implemented rules.
-- The payout is calculated correctly.
-- The chip balance updates correctly.
-- A round cannot accidentally be settled twice.
-- The game can start another round after the previous one finishes.
-
-Testing these situations helps identify errors that may not be visible from the interface alone.
-
----
 
 # Part 3: Development Process
 
@@ -440,27 +423,6 @@ I will also document my decisions and mistakes so that I can learn from them ins
 Ultimately, I want to become a developer who can understand a problem, design a solution, implement it, and explain why it works.
 
 This project has helped me recognize that learning to code is not just about making a program run. It is about developing the ability to reason through problems, test ideas, and improve a solution over time.
-
----
-
-# Project Files
-
-The project documentation includes the main game interface, rules, tutorials, and gameplay demonstration.
-
-Make sure the following files are uploaded to the repository if you want the screenshots and video to appear correctly:
-
-```text
-Your-Repository/
-├── README.md
-├── images/
-│   ├── game-main.png
-│   ├── rules.png
-│   ├── tutorial-card-values.png
-│   ├── tutorial-pok.png
-│   └── tutorial-deng-multipliers.png
-└── videos/
-    └── pok-deng-gameplay.mp4
-```
 
 If your files have different names, update the Markdown image paths and video link to match them.
 

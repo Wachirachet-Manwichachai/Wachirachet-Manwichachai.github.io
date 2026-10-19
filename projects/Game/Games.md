@@ -150,27 +150,29 @@ It can help explain concepts and suggest possible improvements, but I remain res
 
 I also learned that asking focused questions can help me understand individual components instead understanding the entire project as a whole.
 
+""Documentation note"": The examples above explain my approach to working with AI. As I wanted my documentation to be authentic, I implement an actual example of a AI usage.
+
 # Part 4: Understanding the algorithm
 
 ## Understanding How Different Technologies Work Together
 
-Through this project, I learned how HTML, CSS, and JavaScript work together to create an interactive browser-based game.
+Through this project, I learned how HTML, CSS, and JavaScript work together to create a fun game.
 
-HTML defines the structure, CSS controls the appearance, and JavaScript manages the behavior.
+HTML create the structure, CSS controls the design, and JavaScript manages logic.
 
-These technologies have different responsibilities, but the finished game depends on all of them working together.
+These technologies have different responsibilities, but the finished game depends on all of them working together at the sametime.
 
-## Understanding State
+## Understanding Phase
 
-I learned that the game needs to remember information about the current round.
+I learned that the game needed information about the current round.
 
 Variables represent this information, while functions update it as the player interacts with the game.
 
-I also learned that changing the game state can require updating the interface so that the player sees the correct information.
+I also learned that changing the game state or roundN inside my code can updating the interface so that the player sees the correct information.
 
 ## Understanding Conditional Logic
 
-The game uses decisions to evaluate card values, recognize special hands, compare the player and dealer, and calculate results.
+The game uses decisions to evaluate card values, recognize multiplication hands, compare the player and dealer, and calculate results.
 
 I learned that these decisions need to be organized carefully.
 

@@ -40,7 +40,7 @@ The screenshots below document the interface and tutorials created for the game 
 
 ## Main Game Screen
 
-![Main Pok Deng game screen](images/game-main.png)
+![Main Pok Deng game screen](projects/Game/Screenshot 2026-10-16 122328.png)
 
 The main game screen displays the game table, dealer, player, cards, and chip balance.
 
@@ -56,7 +56,7 @@ I learned that a game interface should make the most important information easy 
 
 ## 9. Rules Window
 
-![Pok Deng game rules](images/rules.png)
+![Pok Deng game rules](projects/Game/Screenshot 2026-10-16 122342.png)
 
 The Rules button provides an explanation of how to play the game.
 
@@ -72,7 +72,7 @@ Providing instructions directly in the game makes the experience easier to follo
 
 ## 10. Card Values Tutorial
 
-![Tutorial explaining card values](images/tutorial-card-values.png)
+![Tutorial explaining card values](projects/Game/Screenshot 2026-10-16 122352.png)
 
 This tutorial explains how card values are calculated.
 
@@ -90,7 +90,7 @@ The program must perform the same calculation every time and handle different co
 
 ## 11. Pok Hands Tutorial
 
-![Tutorial showing Pok 8 and Pok 9](images/tutorial-pok.png)
+![Tutorial showing Pok 8 and Pok 9](Screenshot 2026-10-16 122358.png)
 
 This tutorial demonstrates Pok 8 and Pok 9, which are special hands formed by the first two cards under the game's rules.
 
@@ -106,7 +106,7 @@ The program cannot always compare hand values using one simple rule. It must als
 
 ## 12. Deng Multipliers Tutorial
 
-![Tutorial showing Deng multipliers](images/tutorial-deng-multipliers.png)
+![Tutorial showing Deng multipliers](projects/Game/Screenshot 2026-10-16 122404.png)
 
 This tutorial explains combinations that can affect payouts, such as pairs, suited cards, straights, flushes, and three of a kind, where applicable under the rules implemented in the game.
 

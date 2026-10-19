@@ -176,6 +176,8 @@ I also learned that changing the game state or roundN inside my code can updatin
 
 ## Understanding Conditional Logic
 
+<img style="max-width: 100%; height: auto; display: block;" src="https://github.com/user-attachments/assets/a7845ecd-7b9e-47aa-ac13-f37bc2866402" />
+
 The game uses decisions to evaluate card values, recognize multiplication hands, compare the player and dealer, and calculate results.
 
 I learned that these decisions need to be organized carefully.
@@ -184,103 +186,21 @@ The order in which conditions are checked can affect the result, especially when
 
 ## Understanding Functions
 
+<img style="max-width: 100%; height: auto; display: block;" src="https://github.com/user-attachments/assets/7ceac2a8-df0d-4739-9d23-852a8313cf7a" />
+
 Functions allow a program to group related instructions together.
 
 For example, a game can use separate functions for dealing cards, calculating hand values, determining the winner, or updating the interface.
 
 This makes it easier to understand what each part of the program does.
 
-It also makes debugging more manageable because I can investigate a particular function instead of reviewing the entire program at once.
+It also makes debugging more manageable because I can investigate a function independantly instead of reviewing the entire program at once.
 
-## Understanding Testing and Debugging
-
-I learned that writing code is only one part of software development.
-
-Testing is necessary to check whether the program behaves as expected.
-
-For a card game, I need to consider ordinary situations as well as special cases, such as ties, special hands, invalid bets, and repeated button clicks.
-
-I also learned that an error may come from the relationship between different parts of the program rather than from one isolated line.
-
-## Understanding User Experience
-
-The game needs to communicate information clearly.
-
-Players should understand the available actions, their current balance, the cards they have received, and the result of a round.
-
-Adding rules and tutorial sections helps make the game more accessible.
-
-This taught me that software development involves both technical correctness and usability.
-
----
-
-# Part 5: How I Will Approach Software Development in the Future
-
-## Start With a Clear Plan
-
-In future projects, I will begin by defining the main goal and listing the required features.
-
-I will identify which features are essential and which can be added later.
-
-This should help me avoid making the project unnecessarily complicated before the core functionality works.
-
-## Build the Project in Small Steps
-
-I will try to implement and test one feature at a time.
-
-For example, I could begin with the basic interface, then add player actions, game state, calculations, and final results.
-
-After each stage, I can check whether the feature works before adding more complexity.
-
-This approach should make errors easier to locate and reduce the risk of breaking working parts of the project.
-
-## Understand the Code Before Changing It
-
-I will make a greater effort to understand the purpose of each important variable and function.
-
-When using AI, I will ask for explanations of the relevant code and request examples that demonstrate how it works.
-
-I want to become better at modifying code independently instead of relying on AI to produce a complete solution every time.
-
-## Test Edge Cases
-
-In the future, I will create a checklist of possible situations before considering a project complete.
-
-For a card game, these might include invalid bets, ties, special hands, and repeated actions.
-
-For other types of software, the relevant edge cases will depend on the problem being solved.
-
-Testing these situations can reveal errors that may not appear during ordinary use.
-
-## Keep Better Documentation
-
-I will document important decisions, problems, and improvements while working on a project.
-
-This includes recording:
-- What I was trying to achieve.
-- What problem I encountered.
-- What I tried.
-- What I changed.
-- Whether the change worked.
-- What I learned from the result.
-
-Keeping these records will make it easier to understand my own development process and explain how the project evolved.
-
-## Use AI as a Learning Tool
-
-I will continue using AI to help explain difficult concepts and explore possible solutions.
-
-However, I will focus on asking questions that help me understand the reasoning behind the code.
-
-I will also verify important results through testing instead of assuming that generated code is correct.
-
-My goal is to become more independent as a programmer while using AI to make my learning process more effective.
-
-# Part 6: Final Reflection
+# Part 5: Final Reflection
 
 ## What I Noticed
 
-While developing my Pok Deng game, I noticed that making an interactive program requires coordinating several different systems.
+While developing my Pok Deng game, I noticed that making an interactive games requires coordinating several different systems instead of just one total system.
 
 The interface must display information clearly, the variables must represent the current game state, and the game logic must calculate the correct result.
 
@@ -290,11 +210,11 @@ I also noticed that breaking a project into smaller components makes it easier t
 
 ## What I Learned
 
-I learned that software development is an iterative process.
+I learned that software development is an interative process.
 
-The first version of a feature does not necessarily need to be perfect. It is more important to understand what the feature should do, test the implementation, identify problems, and make informed improvements.
+The first version of a feature does not necessarily need to be perfect. It is more important to understand what the feature should do, test the change, identify problems, and make informed improvements.
 
-I also learned that AI can support this process, but it does not replace the need to understand and verify the code.
+I also learned that AI can support this process, but it does not totally verify the code correctness.
 
 The most valuable part of using AI is not simply receiving code. It is learning how to ask better questions, evaluate possible solutions, and understand why a particular approach works.
 
@@ -325,5 +245,3 @@ Ultimately, I want to become a developer who can understand a problem, design a 
 This project has helped me recognize that learning to code is not just about making a program run. It is about developing the ability to reason through problems, test ideas, and improve a solution over time.
 
 If your files have different names, update the Markdown image paths and video link to match them.
-
-**Final reminder:** This journal describes the development process and the concepts involved. For the strongest evidence of your own work, include real screenshots, an actual gameplay recording, and examples of your AI prompts and the changes you made after reviewing the responses.

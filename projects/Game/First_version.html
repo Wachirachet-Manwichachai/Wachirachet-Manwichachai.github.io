@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pok Deng (ป๊อกเด้ง)</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; background: radial-gradient(ellipse at center, #7a1f1f 0%, #3d0e0e 100%);
+    min-height: 100vh; color: #fff; display: flex; flex-direction: column; align-items: center; padding: 10px; user-select: none; }
+  h1 { font-size: 1.5em; margin: 6px 0; text-shadow: 0 2px 4px rgba(0,0,0,.5); }
+  #topbar { display: flex; gap: 16px; align-items: center; background: rgba(0,0,0,.35); padding: 6px 16px; border-radius: 8px; font-size: 14px; flex-wrap: wrap; justify-content: center; }
+  #topbar b { color: #ffd45e; }
+  button { background: #e8b84b; color: #3a2a00; border: none; border-radius: 8px; padding: 8px 16px; font-size: 14px; font-weight: bold; cursor: pointer; box-shadow: 0 2px 5px rgba(0,0,0,.4); margin: 2px; }
+  button:hover { background: #ffd066; }
+  button:disabled { opacity: .4; cursor: default; }
+  button.hit { background: #4fc3f7; } button.stay { background: #81c784; }
+  #table { width: 100%; max-width: 760px; margin-top: 10px; display: flex; flex-direction: column; gap: 10px; }
+  .seat { background: rgba(0,0,0,.28); border-radius: 12px; padding: 10px 14px; }
+  .seat.dealer { background: rgba(0,0,0,.45); border: 1px solid #e8b84b; }
+  .seat.won  { outline: 3px solid #66bb6a; }
+  .seat.lost { outline: 3px solid #ef5350; }
+  .seat.tied { outline: 3px solid #90a4ae; }
+  .sname { font-weight: bold; margin-bottom: 6px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 6px; }
+  .sname .res { color: #ffd45e; }
+  .cards { display: flex; gap: 8px; min-height: 86px; align-items: center; }
+  .card { width: 58px; height: 82px; border-radius: 8px; background: #fff; color: #111; position: relative;
+    box-shadow: 0 3px 6px rgba(0,0,0,.5); display: flex; flex-direction: column; justify-content: space-between; padding: 5px 7px;
+    font-weight: bold; animation: flip .3s ease; }
+  @keyframes flip { from { transform: rotateY(90deg); } to { transform: rotateY(0); } }
+  .card .tr { align-self: flex-end; transform: rotate(180deg); }
+  .card .rank { font-size: 17px; line-height: 1.1; }
+  .card .mid { font-size: 26px; text-align: center; }
+  .card.red { color: #c62828; }
+  .card.back { background: repeating-linear-gradient(45deg, #1a4a80, #1a4a80 6px, #2d6cb5 6px, #2d6cb5 12px); }
+  .handinfo { font-size: 13px; margin-top: 6px; color: #ffe0a3; min-height: 17px; }
+  #betRow { display: flex; gap: 8px; align-items: center; justify-content: center; margin-top: 10px; flex-wrap: wrap; }
+  .chip { width: 52px; height: 52px; border-radius: 50%; border: 4px dashed #fff; font-weight: bold; cursor: pointer;
+    display: flex; align-items: center; justify-content: center; font-size: 15px; box-shadow: 0 3px 6px rgba(0,0,0,.5); color:#fff; }
+  .chip.c5 { background: #5c6bc0; } .chip.c10 { background: #26a69a; } .chip.c25 { background: #ef5350; } .chip.c50 { background: #7e57c2; }
+  .chip.sel { transform: scale(1.18); border-style: solid; }
+  #actions { text-align: center; margin: 8px 0; min-height: 44px; }
+  #status { text-align: center; font-size: 15px; margin: 6px 0; min-height: 20px; font-weight: bold; }
+  #msg { position: fixed; inset: 0; display: none; align-items: center; justify-content: center; background: rgba(0,0,0,.75); z-index: 99; }
+  #msgBox { background: #3d1515; border: 2px solid #e8b84b; border-radius: 14px; padding: 24px 30px; text-align: center; max-width: 560px; max-height: 85vh; overflow: auto; }
+</style>
+</head>
+<body>
+<h1>🃏 Pok Deng (ป๊อกเด้ง)</h1>
+<div id="topbar">
+  <span>Your chips: <b id="chips">100</b></span>
+  <span>Riku: <b id="chips1">100</b></span>
+  <span>Mei: <b id="chips2">100</b></span>
+  <span>Round: <b id="round">1</b></span>
+  <button onclick="showRules()">❓ Rules</button>
+</div>
+<div id="status"></div>
+<div id="table">
+  <div class="seat dealer" id="seatD"><div class="sname"><span>🎩 Dealer</span><span class="res" id="resD"></span></div><div class="cards" id="cardsD"></div><div class="handinfo" id="infoD"></div></div>
+  <div class="seat" id="seat0"><div class="sname"><span>🫵 You <span id="bet0" style="color:#9fd8c0"></span></span><span class="res" id="res0"></span></div><div class="cards" id="cards0"></div><div class="handinfo" id="info0"></div></div>
+  <div class="seat" id="seat1"><div class="sname"><span>Riku <span id="bet1" style="color:#9fd8c0"></span></span><span class="res" id="res1"></span></div><div class="cards" id="cards1"></div><div class="handinfo" id="info1"></div></div>
+  <div class="seat" id="seat2"><div class="sname"><span>Mei <span id="bet2" style="color:#9fd8c0"></span></span><span class="res" id="res2"></span></div><div class="cards" id="cards2"></div><div class="handinfo" id="info2"></div></div>
+</div>
+<div id="betRow">
+  <span style="font-weight:bold">Your bet:</span>
+  <div class="chip c5" data-v="5">5</div>
+  <div class="chip c10 sel" data-v="10">10</div>
+  <div class="chip c25" data-v="25">25</div>
+  <div class="chip c50" data-v="50">50</div>
+  <button id="dealBtn" onclick="deal()">🎴 Deal</button>
+</div>
+<div id="actions"></div>
+<div id="msg"><div id="msgBox"></div></div>
+
+<script>
+const SUITS = ['♠','♥','♦','♣'];
+const RANKS = ['A','2','3','4','5','6','7','8','9','10','J','Q','K'];
+const NAMES = ['You','Riku','Mei'];
+
+let deck = [], hands = [], dealerHand = [], chips = [100,100,100];
+let bet = 10, bets = [10,10,10], roundN = 1, phase = 'bet'; // bet | play | done
+
+const cardVal = c => { const r = c % 13; return r === 0 ? 1 : r >= 9 ? 0 : r + 1; };
+const handVal = h => h.reduce((s,c) => s + cardVal(c), 0) % 10;
+
+function dengInfo(h) {
+  if (h.length === 2) {
+    const [a,b] = h;
+    if (a % 13 === b % 13) return { mult: 2, name: 'Pair ×2' };
+    if (Math.floor(a/13) === Math.floor(b/13)) return { mult: 2, name: 'Suited ×2' };
+    return { mult: 1, name: '' };
+  }
+  const ranks = h.map(c => c % 13).sort((x,y) => x - y);
+  const suits = h.map(c => Math.floor(c/13));
+  if (ranks[0] === ranks[1] && ranks[1] === ranks[2]) return { mult: 5, name: 'Three of a kind ×5' };
+  const straight = (ranks[1] === ranks[0]+1 && ranks[2] === ranks[1]+1) ||
+                   (ranks[0] === 0 && ranks[1] === 11 && ranks[2] === 12);    // Q-K-A
+  if (straight) return { mult: 3, name: 'Straight ×3' };
+  if (suits[0] === suits[1] && suits[1] === suits[2]) return { mult: 3, name: 'Flush ×3' };
+  return { mult: 1, name: '' };
+}
+const deng = h => dengInfo(h).mult;
+const isPok = h => h.length === 2 && handVal(h) >= 8;
+
+function cardEl(c, hidden) {
+  const d = document.createElement('div');
+  if (hidden) { d.className = 'card back'; return d; }
+  const suit = SUITS[Math.floor(c/13)], rank = RANKS[c % 13];
+  d.className = 'card' + ((suit === '♥' || suit === '♦') ? ' red' : '');
+  d.innerHTML = '<div class="rank">' + rank + suit + '</div><div class="mid">' + suit + '</div><div class="rank tr">' + rank + suit + '</div>';
+  return d;
+}
+
+function describe(h) {
+  const v = handVal(h), di = dengInfo(h);
+  if (isPok(h)) return 'Value: ' + v + ' — POK ' + v + '!' + (di.mult > 1 ? ' ' + di.name : '');
+  return 'Value: ' + v + (di.name ? ' — ' + di.name : '');
+}
+
+function renderSeat(id, h, hidden, info) {
+  const c = document.getElementById('cards' + id);
+  c.innerHTML = '';
+  h.forEach(card => c.appendChild(cardEl(card, hidden)));
+  document.getElementById('info' + id).textContent = info || '';
+}
+
+function updateChips() {
+  document.getElementById('chips').textContent = chips[0];
+  document.getElementById('chips1').textContent = chips[1];
+  document.getElementById('chips2').textContent = chips[2];
+  document.getElementById('round').textContent = roundN;
+}
+
+document.querySelectorAll('.chip').forEach(ch => ch.onclick = () => {
+  if (phase !== 'bet') return;
+  document.querySelectorAll('.chip').forEach(x => x.classList.remove('sel'));
+  ch.classList.add('sel'); bet = +ch.dataset.v;
+});
+
+function deal() {
+  if (phase !== 'bet') return;
+  if (chips[0] < bet) { setStatus('Not enough chips for that bet!'); return; }
+  phase = 'play';
+  document.getElementById('dealBtn').disabled = true;
+  document.querySelectorAll('.seat').forEach(s => s.classList.remove('won','lost','tied'));
+  ['D','0','1','2'].forEach(i => document.getElementById('res' + i).textContent = '');
+  deck = [...Array(52).keys()];
+  for (let i = deck.length-1; i > 0; i--) { const j = Math.floor(Math.random()*(i+1)); [deck[i],deck[j]] = [deck[j],deck[i]]; }
+  hands = [[deck.pop(),deck.pop()],[deck.pop(),deck.pop()],[deck.pop(),deck.pop()]];
+  dealerHand = [deck.pop(),deck.pop()];
+  bets = [bet, 5 + 5*Math.floor(Math.random()*3), 5 + 5*Math.floor(Math.random()*3)];
+  bets[1] = Math.min(bets[1], chips[1]); bets[2] = Math.min(bets[2], chips[2]);
+  for (let i = 0; i < 3; i++) document.getElementById('bet' + i).textContent = '(bet ' + bets[i] + ')';
+  renderSeat('D', dealerHand, true, '??');
+  renderSeat('0', hands[0], false, describe(hands[0]));
+  renderSeat('1', hands[1], true, '??');
+  renderSeat('2', hands[2], true, '??');
+
+  if (isPok(dealerHand)) { setStatus('Dealer has Pok! Instant showdown.'); setTimeout(showdown, 900); return; }
+  if (isPok(hands[0])) { setStatus('You have POK ' + handVal(hands[0]) + '! You stand automatically.'); setTimeout(botsAndShowdown, 900); return; }
+  setStatus('Your move: draw a third card or stay?');
+  const a = document.getElementById('actions');
+  a.innerHTML = '';
+  const hitB = document.createElement('button'); hitB.className = 'hit'; hitB.textContent = '🎴 Draw card';
+  hitB.onclick = () => { hands[0].push(deck.pop()); renderSeat('0', hands[0], false, describe(hands[0])); a.innerHTML=''; botsAndShowdown(); };
+  const stayB = document.createElement('button'); stayB.className = 'stay'; stayB.textContent = '✋ Stay';
+  stayB.onclick = () => { a.innerHTML=''; botsAndShowdown(); };
+  a.appendChild(hitB); a.appendChild(stayB);
+}
+
+function botsAndShowdown() {
+  // bots draw on 4 or less (if no pok)
+  for (const i of [1,2]) if (!isPok(hands[i]) && handVal(hands[i]) <= 4) hands[i].push(deck.pop());
+  setStatus('Dealer plays…');
+  setTimeout(() => {
+    if (!isPok(dealerHand) && handVal(dealerHand) <= 4) dealerHand.push(deck.pop());
+    showdown();
+  }, 700);
+}
+
+function showdown() {
+  phase = 'done';
+  document.getElementById('actions').innerHTML = '';
+  renderSeat('D', dealerHand, false, describe(dealerHand));
+  renderSeat('1', hands[1], false, describe(hands[1]));
+  renderSeat('2', hands[2], false, describe(hands[2]));
+  const dv = handVal(dealerHand), dd = deng(dealerHand), dPok = isPok(dealerHand);
+  let lines = [];
+  for (let i = 0; i < 3; i++) {
+    const pv = handVal(hands[i]), pd = deng(hands[i]), pPok = isPok(hands[i]);
+    let delta = 0, res = '';
+    const playerBeats = (pPok && !dPok) || (pv > dv && pPok === dPok);
+    const dealerBeats = (dPok && !pPok) || (dv > pv && pPok === dPok);
+    if (playerBeats) { delta = bets[i] * pd; res = 'WIN +' + delta; }
+    else if (dealerBeats) { delta = -bets[i] * dd; res = 'LOSE ' + delta; }
+    else { res = 'TIE'; }
+    chips[i] += delta;
+    document.getElementById('res' + i).textContent = res;
+    document.getElementById('seat' + i).classList.add(delta > 0 ? 'won' : delta < 0 ? 'lost' : 'tied');
+    lines.push(NAMES[i] + ': ' + res);
+  }
+  document.getElementById('resD').textContent = 'Value ' + dv + (dPok ? ' POK!' : '') + (dd > 1 ? ' ×' + dd : '');
+  updateChips();
+  setStatus(lines.join('  ·  '));
+  const a = document.getElementById('actions');
+  if (chips[0] <= 0) {
+    const b = document.createElement('button'); b.textContent = '💸 Out of chips — Restart';
+    b.onclick = () => { chips = [100,100,100]; roundN = 0; nextRound(); };
+    a.appendChild(b);
+  } else {
+    const b = document.createElement('button'); b.textContent = '▶️ Next Round';
+    b.onclick = nextRound; a.appendChild(b);
+  }
+}
+
+function nextRound() {
+  roundN++; phase = 'bet';
+  if (chips[1] <= 0) chips[1] = 100; if (chips[2] <= 0) chips[2] = 100;
+  updateChips();
+  document.getElementById('dealBtn').disabled = false;
+  ['D','0','1','2'].forEach(i => { document.getElementById('cards' + i).innerHTML = ''; document.getElementById('info' + i).textContent = ''; document.getElementById('res' + i).textContent = ''; });
+  document.querySelectorAll('.seat').forEach(s => s.classList.remove('won','lost','tied'));
+  for (let i = 0; i < 3; i++) document.getElementById('bet' + i).textContent = '';
+  setStatus('Choose your bet and press Deal!');
+}
+
+function setStatus(t) { document.getElementById('status').textContent = t; }
+
+function showRules() {
+  const box = document.getElementById('msgBox');
+  box.innerHTML = '<h2>📖 Pok Deng Rules</h2><div style="text-align:left;font-size:14px;line-height:1.7">' +
+  '<p><b>Goal:</b> get a hand value closer to 9 than the Dealer. Everyone plays against the Dealer only.</p>' +
+  '<p><b>Value:</b> sum of cards, <b>mod 10</b> (only last digit counts). A=1, 2–9 face value, 10/J/Q/K=0.</p>' +
+  '<p><b>Pok:</b> 8 or 9 on your first two cards — instant stand, beats any non-Pok hand!</p>' +
+  '<p><b>Draw or Stay:</b> if no Pok, you may draw one third card.</p>' +
+  '<p><b>Deng (payout multipliers):</b><br>· 2 cards, pair or same suit → <b>×2</b><br>· 3 cards, flush or straight → <b>×3</b><br>· three of a kind → <b>×5</b></p>' +
+  '<p><b>Payout:</b> win → bet × your deng. Lose → bet × dealer deng. Tie → nothing changes.</p>' +
+  '<p style="color:#ffd45e"><b>Note:</b> chips are just points for fun — no real money here! 😊</p>' +
+  '</div><br><button onclick="document.getElementById(\'msg\').style.display=\'none\'">Close</button>';
+  document.getElementById('msg').style.display = 'flex';
+}
+
+setStatus('Choose your bet and press Deal!');
+updateChips();
+</script>
+</body>
+</html>

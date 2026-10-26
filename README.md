@@ -14,6 +14,9 @@ A brief introduction to my second project.
 ### [Poker game](projects/Game/Games.md)
 A brief introduction to my third project.
 
+### [Poker game](projects/Game/Games.md)
+A brief introduction to my third project.
+
 ---
 
 Each project has its own documentation and source code repository.

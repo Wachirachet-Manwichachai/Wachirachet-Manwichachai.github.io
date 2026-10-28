@@ -11,7 +11,8 @@ On the second day, we focused on programming the Arduino to respond to joystick 
 
 # Showcase
 
-https://github.com/user-attachments/assets/f28ac6df-73eb-40e9-8fec-da830dfb357b
+<video src="https://github.com/user-attachments/assets/f28ac6df-73eb-40e9-8fec-da830dfb357b" width="100%" autoplay loop muted controls>
+</video>
 
 This video how to execute the connection and show what does our software capable of connecting with the Landlord game.
 
@@ -21,4 +22,4 @@ AI helped us write, understand, and debug code. Google and YouTube tutorials wer
 # Source
 
 This video show how to communicate between potentiometer to HTML but we get the basic ideas and adapt it to our projects.
-https://www.youtube.com/watch?v=gQYsUjT-IBo
+[https://www.youtube.com/watch?v=gQYsUjT-IBo](url)

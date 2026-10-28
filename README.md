@@ -14,7 +14,7 @@ A brief introduction to my second project.
 ### [Poker game](projects/Game/Games.md)
 A brief introduction to my third project.
 
-### [Poker game](projects/Game/Games.md)
+### [Serial Communication](projects/serial_communication/serial_communication.md)
 A brief introduction to my third project.
 
 ---

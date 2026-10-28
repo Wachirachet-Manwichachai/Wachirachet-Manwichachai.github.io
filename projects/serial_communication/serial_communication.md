@@ -10,7 +10,9 @@ On the first day, we focused on connecting the joystick to the Arduino and under
 On the second day, we focused on programming the Arduino to respond to joystick movements. We tested the code, observed the outputs, and debugged problems. The biggest challenge is to understand the joystick to HTML transition which mainly focuses on fucntion. When the player moves the joystick, the Arduino sends commands such as NAV_LEFT or NAV_RIGHT to JavaScript, which moves the highlighted card on the screen. Pressing the joy stick send out selecting command to Java, allowing the player to select or deselect cards. JavaScript can also send commands back to the Arduino to control the turn indicator LEDs. This allows the physical hardware and the webpage to work together as one interactive system. 
 
 # Showcase
-https://github.com/user-attachments/assets/5568f7e5-0de3-41de-b105-de7dc666829a
+
+https://github.com/user-attachments/assets/f28ac6df-73eb-40e9-8fec-da830dfb357b
+
 This video how to execute the connection and show what does our software capable of connecting with the Landlord game.
 
 # AI and Online Resources

@@ -14,7 +14,7 @@ https://github.com/user-attachments/assets/5568f7e5-0de3-41de-b105-de7dc666829a
 This video how to execute the connection and show what does our software capable of connecting with the Landlord game.
 
 # AI and Online Resources
-AI helped us write, understand, and debug code. Google and YouTube tutorials were also useful for learning about the circuit connections and how the joystick interacts with the Arduino then transfer it to HTML. These resources helped us troubleshoot problems and make progress more efficiently.
+AI helped us write, understand, and debug code. Google and YouTube tutorials were also useful for learning about the circuit connections and how the joystick interacts with the Arduino then transfer it to HTML which building the foundation of curcuit and coding skill before applying it alongside with ai. These resources helped us troubleshoot problems and make progress more efficiently.
 
 # Source
 

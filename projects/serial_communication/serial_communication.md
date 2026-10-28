@@ -16,4 +16,6 @@ This video how to execute the connection and show what does our software capable
 AI helped us write, understand, and debug code. Google and YouTube tutorials were also useful for learning about the circuit connections and how the joystick interacts with the Arduino then transfer it to HTML. These resources helped us troubleshoot problems and make progress more efficiently.
 
 # Source
-[https://www.youtube.com/watch?v=gQYsUjT-IBo](url) This video show how to communicate between potentiometer to HTML but we get the basic ideas and adapt it to our projects.
+
+This video show how to communicate between potentiometer to HTML but we get the basic ideas and adapt it to our projects.
+https://www.youtube.com/watch?v=gQYsUjT-IBo

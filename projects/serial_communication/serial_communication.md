@@ -1,3 +1,4 @@
+## Serial Communication between Arduino and HTML Project
 # Day 1: Hardware Setup
 <img img style="max-width: 100%; height: auto; display: block;" alt="Screenshot 2026-10-16 122404" src="https://github.com/user-attachments/assets/4244a4f0-fb9e-4dea-92f6-cdd5e8ecb3d4" />
 

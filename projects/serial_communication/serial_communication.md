@@ -21,5 +21,4 @@ AI helped us write, understand, and debug code. Google and YouTube tutorials wer
 
 # Source
 
-This video show how to communicate between potentiometer to HTML but we get the basic ideas and adapt it to our projects.
-[https://www.youtube.com/watch?v=gQYsUjT-IBo](url)
+[![This video show how to communicate between potentiometer to HTML but we get the basic ideas and adapt it to our projects.](https://youtube.com)](https://www.youtube.com/watch?v=gQYsUjT-IBo)

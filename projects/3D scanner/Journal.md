@@ -5,7 +5,7 @@ Material: 1 Sharp 2Y0A21 F 56 B, 2 Stepper motor 17HE15-1504S, 2 Stepper driver,
 
 # Step 2 Setup
 As we gathered all the materials this is the step by step procedure:
-## 1. Put the shield on top of Arduino motherboard
-## 2. 
+### 1. Put the shield on top of Arduino motherboard
+### 2. 
 https://global.sharp/products/device/lineup/data/pdf/datasheet/gp2y0a21yk_e.pdf
 # Step 3 Coding

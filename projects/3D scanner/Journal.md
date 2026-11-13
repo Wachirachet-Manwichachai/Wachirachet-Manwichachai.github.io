@@ -19,9 +19,7 @@ https://global.sharp/products/device/lineup/data/pdf/datasheet/gp2y0a21yk_e.pdf
 We chose VScode as our code editor as it can be useful for long-term usage as it able to plot in 3D with Matlab extension which far superior to Arduino. In order communicate from computor with the motherboard using VScode we need an extension and we picked PlatformIO IDE. 
 #### 1. Download VScode and C++ langauge
 #### 2. Download PlatformIO IDE on VScode
-#### 3. Setting up file<img width="134" height="167" alt="Screenshot 2026-11-12 202439" src="https://github.com/user-attachments/assets/0c694a85-6bff-4e86-95a5-e9847f8a6bfb" />
-
-<img style="max-width: 100%; height: auto; display: block;" alt="Screenshot 2026-11-12 202439" src="https://github.com/user-attachments/assets/b4aef7f3-6ca9-4252-8ce4-184d76762cf3" />
+#### 3. After creating new project this will be the folder that I had created, the files that we are going to use is platformio.ini and main.ccp in src folder. <img style="max-width: 100%; height: auto; display: block;" alt="Screenshot 2026-11-12 202439" src="https://github.com/user-attachments/assets/b4aef7f3-6ca9-4252-8ce4-184d76762cf3" />
 
 # Challenge/Problems
 

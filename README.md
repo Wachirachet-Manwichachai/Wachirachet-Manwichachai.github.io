@@ -15,8 +15,9 @@ A brief introduction to my second project.
 A brief introduction to my third project.
 
 ### [Serial Communication](projects/serial_communication/serial_communication.md)
+A brief introduction to my third project.
 
-### [Serial Communication](projects/serial_communication/serial_communication.md)
----
+### [3D scanner](projects/3D scanner/Journal.md)
+A brief introduction to my third project.
 
 Each project has its own documentation and source code repository.

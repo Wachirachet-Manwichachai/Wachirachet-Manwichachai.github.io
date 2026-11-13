@@ -24,9 +24,11 @@ We chose VScode as our code editor as it can be useful for long-term usage as it
 
 # Challenge/Problems
 #### 1. Stepper motor stalling: 
-#### 2. Uploading Error: Down here is error line occur when we are uploading the code. This line indicate that the controller is failed to sinc as it tried 10 times before exit(line down below)
+#### 2. Uploading Error: Down here is error line occur when we are uploading the code. This line indicate that the controller is failed to sinc as it tried 10 times before exit(line down below). I tried to change uploading cables and usb-c adapter couple times and we're still figuring out what's the problem.
+### Sample Example:
 Error: programmer is not responding
 Warning: attempt 1 of 10: not in sync: resp=0x00
+
 Error: unable to open port /dev/cu.usbmodem101 for programmer arduino
 Failed uploading: uploading error: exit status 1
 # Our Next step

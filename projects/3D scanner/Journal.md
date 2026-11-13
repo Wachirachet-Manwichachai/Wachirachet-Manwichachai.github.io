@@ -1,7 +1,7 @@
 # Step 1 CAD + Material
 The first step involve in indentifiying material crucial for the 3D scanner project. For scaanning part we need ir sensor to measure accurately, but also need the ability to trace the object which the stepper motor come in play. Lastly in order to use stepper motor we need to use stepper driver for limiting and controlling the power as motor can't handle the direct power.
 
-Material: 1 Sharp 2Y0A21, 2 Stepper motor 17HE15-1504S, 2 Stepper driver, 1 CNC Shield v3, 1 Arduino motherboard, Wires
+### Material: 1 Sharp 2Y0A21, 2 Stepper motor 17HE15-1504S, 2 Stepper driver, 1 CNC Shield v3, 1 Arduino motherboard, Wires
 
 # Step 2 Hardware Setup
 As we gathered all the materials this is the step by step procedure:
@@ -49,4 +49,4 @@ Failed uploading: uploading error: exit status 1
 # Our future plan
 ### Algorithm of our 3D Scanner
 #### Step by Step procedure
-
+1.

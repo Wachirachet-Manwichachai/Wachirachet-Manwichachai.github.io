@@ -22,21 +22,31 @@ We chose VScode as our code editor as it can be useful for long-term usage as it
 #### 3. After creating new project this will be the folder that I had created, the files that we are going to use is platformio.ini and main.ccp in src folder. platformio.ini is a ecosystem/environment embedded into systems which is essentially the setup for the microcontrollers. main.ccp is the central code just like what we are coding in Arduino IDE.
 <img style="max-width: 100%; height: auto; display: block;" alt="Screenshot 2026-11-12 202439" src="https://github.com/user-attachments/assets/b4aef7f3-6ca9-4252-8ce4-184d76762cf3" />
 
-# Challenge/Problems
+# Problems/Errors
 ### 1. Stepper motor stalling: 
 We had the stepper motor moving but as in the present time it hadn't worked as we tried to figure what's the problems, our main suspicion is an incorrect motor coil connection. Since stepper motors operate using two separate electromagnetic coil pairs, connecting the wires in the wrong sequence can prevent the motor from rotating correctly. 
 ### 2. Uploading Error: 
 Down here is error line occur when we are uploading the code. This line indicate that the controller is failed to sinc as it tried 10 times before exit(line down below). I tried to change uploading cables and usb-c adapter couple times and we're still figuring out what's the problem.
 ### Sample Example:
 Error: programmer is not responding
-
 Warning: attempt 1 of 10: not in sync: resp=0x00
 
 Error: unable to open port /dev/cu.usbmodem101 for programmer arduino
-
 Failed uploading: uploading error: exit status 1
 # Our Next step
-### Fixing 
-
+### Fixing the problem
+#### Troubleshooting Process for Stepper motor:
+1. Checking Coil Connections: Identify the two separate coil pairs using a multimeter to determine whether the motor wires are connected in the correct configuration.
+2. Inspecting Motor Wiring: Check the connections between the stepper motor and the motor driver to ensure that all four wires are properly connected.
+3. Rechecking Driver Configuration: Verify the motor driver's current limit and other configuration settings.
+4. Testing Motor Movement: Test the motor independently to determine whether the problem originates from the motor, driver, or control program.
+5. Reviewing the Code: Inspect the motor control program to identify possible errors in the stepping sequence, direction, or timing.
+##### Troubleshooting Process for Uploading error:
+1. Changing USB Cables: Replaced the original uploading cable with alternative cables to determine whether the connection was causing the issue.
+2. Changing USB-C Adapters: Tested several USB-C adapters to eliminate the possibility of an incompatible or faulty adapter.
+3. Checking Port Recognition: Investigated whether the computer could properly recognize the Arduino through its USB connection.
+4. Investigating Communication Issues: Continued examining possible problems involving the serial communication between the computer and the Arduino.
 # Our future plan
-### Controling 
+### Algorithm of our 3D Scanner
+#### Step by Step procedure
+

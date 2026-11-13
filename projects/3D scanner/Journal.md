@@ -9,7 +9,7 @@ As we gathered all the materials this is the step by step procedure:
 #### 2. Set the limit of stepper driver by using multimeter measuring power(potentiameter on the driver) and ground (on the GND)
 #### 3. Connecting the IR sensor to CNC Shield. Pin 1 is OUT/Signal connecting to coolen(right side), pin 2 is GND connecting to GND(right side), and lastly pin 3 is VCC/Vin connect to 5v right accross GND
 #### 4. Our prepared Stepper motors connecting to 4 pins on the right side of the motor driver, the configuration of the wire you can follow to the youtube link down below.
-#### Tip: Connecting EN(enable) with GND so it force the stepper motor drivers to stay permanently enabled without needing software control.
+#### Tip: Connecting EN(enable) with GND (On the left side) so it force the stepper motor drivers to stay permanently enabled without needing software control.
 #### https://www.youtube.com/watch?v=dR4I1YjNKqA
 Here the diagram of the CNC Shield for clarification:
 <img style="max-width: 100%; height: auto; display: block;" alt="image" src="https://github.com/user-attachments/assets/924521da-a175-48b8-a3e0-87855efc5b34" />
@@ -19,7 +19,9 @@ https://global.sharp/products/device/lineup/data/pdf/datasheet/gp2y0a21yk_e.pdf
 We chose VScode as our code editor as it can be useful for long-term usage as it able to plot in 3D with Matlab extension which far superior to Arduino. In order communicate from computor with the motherboard using VScode we need an extension and we picked PlatformIO IDE. 
 #### 1. Download VScode and C++ langauge
 #### 2. Download PlatformIO IDE on VScode
-#### 3. Setting up file
+#### 3. Setting up file<img width="134" height="167" alt="Screenshot 2026-11-12 202439" src="https://github.com/user-attachments/assets/0c694a85-6bff-4e86-95a5-e9847f8a6bfb" />
+
+<img style="max-width: 100%; height: auto; display: block;" alt="Screenshot 2026-11-12 202439" src="https://github.com/user-attachments/assets/b4aef7f3-6ca9-4252-8ce4-184d76762cf3" />
 
 # Challenge/Problems
 

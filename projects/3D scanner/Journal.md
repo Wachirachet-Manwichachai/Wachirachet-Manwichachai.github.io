@@ -6,6 +6,10 @@ Material: 1 Sharp 2Y0A21 F 56 B, 2 Stepper motor 17HE15-1504S, 2 Stepper driver,
 # Step 2 Setup
 As we gathered all the materials this is the step by step procedure:
 ### 1. Put the shield on top of Arduino motherboard
-### 2. 
+### 2. Set the limit of stepper driver by using multimeter measuring power(potentiameter on the driver) and ground (on the GND)
+### 3. Connecting the sensor to external pin on the CNC Shield
+
+<img style="max-width: 100%; height: auto; display: block;" alt="image" src="https://github.com/user-attachments/assets/924521da-a175-48b8-a3e0-87855efc5b34" />
+
 https://global.sharp/products/device/lineup/data/pdf/datasheet/gp2y0a21yk_e.pdf
 # Step 3 Coding

@@ -1,1 +1,62 @@
+# Step 1 CAD + Material
+The first step involve in indentifiying material crucial for the 3D scanner project. For scaanning part we need ir sensor to measure accurately, but also need the ability to trace the object which the stepper motor come in play. Lastly in order to use stepper motor we need to use stepper driver for limiting and controlling the power as motor can't handle the direct power.
+
+### Material: 1 Sharp 2Y0A21, 2 Stepper motor 17HE15-1504S, 2 Stepper driver, 1 CNC Shield v3, 1 Arduino motherboard, Wires
+
+# Step 2 Hardware Setup
+As we gathered all the materials this is the step by step procedure:
+#### 1. Put the shield on top of Arduino motherboard
+#### 2. Set the limit of stepper driver by using multimeter measuring power(potentiameter on the driver) and ground (on the GND)
+#### 3. Connecting the IR sensor to CNC Shield. Pin 1 is OUT/Signal connecting to coolen(right side), pin 2 is GND connecting to GND(right side), and lastly pin 3 is VCC/Vin connect to 5v right accross GND
+#### 4. Our prepared Stepper motors connecting to 4 pins on the right side of the motor driver, the configuration of the wire you can follow to the youtube link down below.
+#### Tip: Connecting EN(enable) with GND (On the left side) so it force the stepper motor drivers to stay permanently enabled without needing software control.
+#### https://www.youtube.com/watch?v=dR4I1YjNKqA
+Here the diagram of the CNC Shield for clarification:
+<img style="max-width: 100%; height: auto; display: block;" alt="image" src="https://github.com/user-attachments/assets/924521da-a175-48b8-a3e0-87855efc5b34" />
+
+https://global.sharp/products/device/lineup/data/pdf/datasheet/gp2y0a21yk_e.pdf
+# Step 3 Software Setup/Coding
+We chose VScode as our code editor as it can be useful for long-term usage as it able to plot in 3D with Matlab extension which far superior to Arduino. In order communicate from computor with the motherboard using VScode we need an extension and we picked PlatformIO IDE. 
+#### 1. Download VScode and C++ langauge
+#### 2. Download PlatformIO IDE on VScode
+#### 3. After creating new project this will be the folder that I had created, the files that we are going to use is platformio.ini and main.ccp in src folder. platformio.ini is a ecosystem/environment embedded into systems which is essentially the setup for the microcontrollers. main.ccp is the central code just like what we are coding in Arduino IDE.
+<img style="max-width: 100%; height: auto; display: block;" alt="Screenshot 2026-11-12 202439" src="https://github.com/user-attachments/assets/b4aef7f3-6ca9-4252-8ce4-184d76762cf3" />
+
+# Problems/Errors
+### 1. Stepper motor stalling: 
+We had the stepper motor moving but as in the present time it hadn't worked as we tried to figure what's the problems, our main suspicion is an incorrect motor coil connection. Since stepper motors operate using two separate electromagnetic coil pairs, connecting the wires in the wrong sequence can prevent the motor from rotating correctly. 
+### 2. Uploading Error: 
+Down here is error line occur when we are uploading the code. This line indicate that the controller is failed to sinc as it tried 10 times before exit(line down below). I tried to change uploading cables and usb-c adapter couple times and we're still figuring out what's the problem.
+### Sample Example:
+Error: programmer is not responding
+Warning: attempt 1 of 10: not in sync: resp=0x00
+
+Error: unable to open port /dev/cu.usbmodem101 for programmer arduino
+Failed uploading: uploading error: exit status 1
+# Our Next step
+### Fixing the problem
+#### Troubleshooting Process for Stepper motor:
+1. Checking Coil Connections: Identify the two separate coil pairs using a multimeter to determine whether the motor wires are connected in the correct configuration.
+2. Inspecting Motor Wiring: Check the connections between the stepper motor and the motor driver to ensure that all four wires are properly connected.
+3. Rechecking Driver Configuration: Verify the motor driver's current limit and other configuration settings.
+4. Testing Motor Movement: Test the motor independently to determine whether the problem originates from the motor, driver, or control program.
+5. Reviewing the Code: Inspect the motor control program to identify possible errors in the stepping sequence, direction, or timing.
+##### Troubleshooting Process for Uploading error:
+1. Changing USB Cables: Replaced the original uploading cable with alternative cables to determine whether the connection was causing the issue.
+2. Changing USB-C Adapters: Tested several USB-C adapters to eliminate the possibility of an incompatible or faulty adapter.
+3. Checking Port Recognition: Investigated whether the computer could properly recognize the Arduino through its USB connection.
+4. Investigating Communication Issues: Continued examining possible problems involving the serial communication between the computer and the Arduino.
+# Our future plan
+### Algorithm of our 3D Scanner
+Our proposed scanning method uses both stepper motors to systematically collect distance measurements from different positions around the object. The main idea is to divide the scanning process into multiple horizontal rotations, with each rotation representing a different vertical scanning level.
+#### Step by Step procedure
+1. Initial Positioning: Place the object on the rotating platform and position the IR sensor at the starting height. Establish the initial position of both stepper motors before beginning the scanning process.
+2. Horizontal Scanning: Activate the Y-axis stepper motor to rotate the object slowly. The motor will move in small movement rather than continuously, allowing the IR sensor to collect distance measurements at consistent angle.
+3. Distance Measurement: After each motor movement, pause briefly to allow the object and sensor readings to stabilize. The IR sensor then measures the distance between itself and the object's surface. Record each measurement alongside its corresponding rotational angle.
+4. Complete 360-Degree Rotation: Continue the measurement process until the rotating platform completes one full 360-degree revolution. This produces a horizontal collection of measurement points around the object.
+5. Vertical Adjustment: Once the horizontal scan is complete, activate the second stepper motor to raise the sensor by a small movement along the vertical axis.
+6. Repeat the Scanning Process: Repeat the horizontal scanning procedure at the new height. Each complete rotation generates another horizontal layer of measurement data.
+7. Scanning Completion: Continue raising the sensor and repeating the scanning process until the sensor reaches the maximum scanning height or the system determines that no valid object measurements are being detected within its measurement range.
+
+Data Processing: Combine the measurements collected at different heights and rotational positions. Convert the distance measurements and corresponding motor angles into three-dimensional coordinates to generate a point cloud representing the object's shape.
 

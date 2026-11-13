@@ -29,9 +29,11 @@ We had the stepper motor moving but as in the present time it hadn't worked as w
 Down here is error line occur when we are uploading the code. This line indicate that the controller is failed to sinc as it tried 10 times before exit(line down below). I tried to change uploading cables and usb-c adapter couple times and we're still figuring out what's the problem.
 ### Sample Example:
 Error: programmer is not responding
+
 Warning: attempt 1 of 10: not in sync: resp=0x00
 
 Error: unable to open port /dev/cu.usbmodem101 for programmer arduino
+
 Failed uploading: uploading error: exit status 1
 # Our Next step
 ### Fixing 

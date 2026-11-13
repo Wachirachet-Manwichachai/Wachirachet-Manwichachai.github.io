@@ -1,49 +1,7 @@
 # Step 1 CAD + Material
 The first step involve in indentifiying material crucial for the 3D scanner project. For scaanning part we need ir sensor to measure accurately, but also need the ability to trace the object which the stepper motor come in play. Lastly in order to use stepper motor we need to use stepper driver for limiting and controlling the power as motor can't handle the direct power.
-## Materials and Components:
-Materials and Components
 
-Component
-
-Quantity
-
-Purpose
-
-Sharp GP2Y0A21YK0F IR Sensor
-
-1
-
-Measures the distance between the sensor and the scanned object.
-
-17HE15-1504S Stepper Motor
-
-2
-
-Provides controlled movement for the scanning mechanism.
-
-Stepper Motor Driver
-
-2
-
-Controls motor current, direction, and stepping.
-
-CNC Shield V3
-
-1
-
-Connects the Arduino, motor drivers, and other components.
-
-Arduino Motherboard
-
-1
-
-Acts as the main controller of the scanning system.
-
-Connecting Wires
-
-As needed
-
-Establishes electrical connections between components.
+Material: 1 Sharp 2Y0A21, 2 Stepper motor 17HE15-1504S, 2 Stepper driver, 1 CNC Shield v3, 1 Arduino motherboard, Wires
 
 # Step 2 Hardware Setup
 As we gathered all the materials this is the step by step procedure:
@@ -59,4 +17,12 @@ Here the diagram of the CNC Shield for clarification:
 https://global.sharp/products/device/lineup/data/pdf/datasheet/gp2y0a21yk_e.pdf
 # Step 3 Software Setup/Coding
 We chose VScode as our code editor as it can be useful for long-term usage as it able to plot in 3D with Matlab extension which far superior to Arduino. In order communicate from computor with the motherboard using VScode we need an extension and we picked PlatformIO IDE. 
-#### 1. 
+#### 1. Download VScode and C++ langauge
+#### 2. Download PlatformIO IDE on VScode
+#### 3. Setting up file
+
+# Challenge/Problems
+
+# Our Next step
+
+# Our future plan

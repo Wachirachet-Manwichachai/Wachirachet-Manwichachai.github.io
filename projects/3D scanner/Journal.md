@@ -51,13 +51,11 @@ Failed uploading: uploading error: exit status 1
 Our proposed scanning method uses both stepper motors to systematically collect distance measurements from different positions around the object. The main idea is to divide the scanning process into multiple horizontal rotations, with each rotation representing a different vertical scanning level.
 #### Step by Step procedure
 1. Initial Positioning: Place the object on the rotating platform and position the IR sensor at the starting height. Establish the initial position of both stepper motors before beginning the scanning process.
-2. Horizontal Scanning: Activate the Y-axis stepper motor to rotate the object slowly. The motor will move in small, predetermined increments rather than continuously, allowing the IR sensor to collect distance measurements at consistent angular intervals.
+2. Horizontal Scanning: Activate the Y-axis stepper motor to rotate the object slowly. The motor will move in small movement rather than continuously, allowing the IR sensor to collect distance measurements at consistent angle.
 3. Distance Measurement: After each motor movement, pause briefly to allow the object and sensor readings to stabilize. The IR sensor then measures the distance between itself and the object's surface. Record each measurement alongside its corresponding rotational angle.
 4. Complete 360-Degree Rotation: Continue the measurement process until the rotating platform completes one full 360-degree revolution. This produces a horizontal collection of measurement points around the object.
-5. Vertical Adjustment: Once the horizontal scan is complete, activate the second stepper motor to raise the sensor by a small, predetermined increment along the vertical axis.
-6.Repeat the Scanning Process: Repeat the horizontal scanning procedure at the new height. Each complete rotation generates another horizontal layer of measurement data.
+5. Vertical Adjustment: Once the horizontal scan is complete, activate the second stepper motor to raise the sensor by a small movement along the vertical axis.
+6. Repeat the Scanning Process: Repeat the horizontal scanning procedure at the new height. Each complete rotation generates another horizontal layer of measurement data.
 7. Scanning Completion: Continue raising the sensor and repeating the scanning process until the sensor reaches the maximum scanning height or the system determines that no valid object measurements are being detected within its measurement range.
 
 Data Processing: Combine the measurements collected at different heights and rotational positions. Convert the distance measurements and corresponding motor angles into three-dimensional coordinates to generate a point cloud representing the object's shape.
-
-
